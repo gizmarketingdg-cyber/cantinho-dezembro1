@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho do Céu - Calendário Editorial Verão 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header .subtitle {
+            font-size: 1.4em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-card h3 {
+            color: #c0392b;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .info-card p {
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .shows-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .shows-section h2 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .shows-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .show-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .show-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .show-item .date {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .show-item .artist {
+            font-size: 1.1em;
+        }
+
+        .week-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .week-header {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .week-header h2 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .reel-card {
+            background: #f8f9fa;
+            border-left: 5px solid #e74c3c;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .reel-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .reel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .reel-date {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .reel-type {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .reel-title {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .reel-objective {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            color: #856404;
+        }
+
+        .texting-section {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .texting-section h4 {
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+
+        .texting-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .texting-list li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .texting-list li:before {
+            content: "📱";
+            position: absolute;
+            left: 0;
+        }
+
+        .caption-section {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .caption-section h4 {
+            color: #16a085;
+            margin-bottom: 10px;
+        }
+
+        .hashtags {
+            color: #3498db;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .stories-section {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .stories-section h4 {
+            color: #e91e63;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .story-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #e91e63;
+        }
+
+        .story-card h5 {
+            color: #e91e63;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .story-type {
+            background: #ff6b9d;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .story-content {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .story-options {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .story-options strong {
+            color: #e91e63;
+        }
+
+        .summary-section {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .summary-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .summary-card {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .summary-card h3 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .week-header h2 {
+                font-size: 1.5em;
+            }
+            
+            .reel-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .reel-type {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏖️ Cantinho do Céu</h1>
+            <p class="subtitle">Calendário Editorial Verão Guriri 2026</p>
+            <p>Planejamento Estratégico de Conteúdo | Aluguel de Temporada</p>
+        </header>
+
+        <div class="info-box">
+            <h2 style="text-align: center; color: #e74c3c; margin-bottom: 20px;">📊 Visão Geral do Calendário</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>19</h3>
+                    <p>Reels Estratégicos</p>
+                </div>
+                <div class="info-card">
+                    <h3>3x</h3>
+                    <p>Posts por Semana</p>
+                </div>
+                <div class="info-card">
+                    <h3>45 dias</h3>
+                    <p>de Conteúdo</p>
+                </div>
+                <div class="info-card">
+                    <h3>Seg/Qua/Sex</h3>
+                    <p>Frequência</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="shows-section">
+            <h2>🎤 Shows Verão Guriri 2026</h2>
+            <div class="shows-grid">
+                <div class="show-item">
+                    <div class="date">31/12</div>
+                    <div class="artist">Tatau</div>
+                </div>
+                <div class="show-item">
+                    <div class="date">02/01</div>
+                    <div class="artist">Tony Salles</div>
+                </div>
+                <div class="show-item">
+                    <div class="date">03/01</div>
+                    <div class="artist">Natanzinho, Nattan, Taiana França</div>
+                </div>
+                <div class="show-item">
+                    <div class="date">04/01</div>
+                    <div class="artist">Léo Santana</div>
+                </div>
+                <div class="show-item">
+                    <div class="date">16/01</div>
+                    <div class="artist">Durval Lelys</div>
+                </div>
+                <div class="show-item">
+                    <div class="date">17/01</div>
+                    <div class="artist">Gusttavo Lima</div>
+                </div>
+                <div class="show-item">
+                    <div class="date">23/01</div>
+                    <div class="artist">Countrybeat</div>
+                </div>
+                <div class="show-item">
+                    <div class="date">24/01</div>
+                    <div class="artist">Cheiro de Amor</div>
+                </div>
+                <div class="show-item">
+                    <div class="date">30/01</div>
+                    <div class="artist">Paulo Ricardo</div>
+                </div>
+                <div class="show-item">
+                    <div class="date">31/01</div>
+                    <div class="artist">Tomaté</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMANA 1 -->
+        <div class="week-section">
+            <div class="week-header">
+                <h2>📅 Semana 1 (25 a 29 Novembro)</h2>
+                <p>Foco: Awareness + Lançamento da Temporada</p>
+            </div>
+
+            <!-- REEL 1 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEG 25/11</span>
+                    <span class="reel-type">Awareness</span>
+                </div>
+                <h3 class="reel-title">REEL 1: "Agenda Bombou"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Awareness | Mostrar programação de shows
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"Saiu a agenda oficial"</li>
+                        <li>"Guriri 2026 vai ser INSANO"</li>
+                        <li>"Tatau, Léo Santana"</li>
+                        <li>"Gusttavo Lima, Durval Lelys"</li>
+                        <li>"Tony Salles, Countrybeat..."</li>
+                        <li>"E você? Já tem onde ficar?"</li>
+                        <li>"Cantinho do Céu"</li>
+                        <li>"Sua base pra curtir TUDO"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>A agenda oficial saiu e Guriri vai FERVER 🔥<br>
+                    - 31/12: Tatau<br>
+                    - 02/01: Tony Salles<br>
+                    - 03/01: Natanzinho, Nattan e Taiana França<br>
+                    - 04/01: Léo Santana<br>
+                    - 16/01: Durval Lelys<br>
+                    - 17/01: Gusttavo Lima<br>
+                    - 23/01: Countrybeat<br>
+                    - 24/01: Cheiro de Amor<br>
+                    - 30/01: Paulo Ricardo<br>
+                    - 31/01: Tomaté<br><br>
+
+                    Shows todos os fins de semana, praia o dia todo e aquela vibe de verão que só o litoral capixaba entrega. O Cantinho do Céu é a base perfeita: piscina privativa pra after, área gourmet pra resenha e 3 quartos pra galera. Dezembro e janeiro enchendo rápido - garante o seu! Link na bio 🌊</p>
+                    <p class="hashtags">#VeraoGuriri2026 #ShowsGuriri #AluguelTemporada #GuririES #LitoralCapixaba</p>
+                </div>
+
+                <div class="stories-section">
+                    <h4>📲 Stories Interativos do Dia</h4>
+                    
+                    <div class="story-card">
+                        <span class="story-type">Enquete</span>
+                        <h5>STORY 1: "Qual Show Você Mais Quer?"</h5>
+                        <div class="story-content">
+                            <p><strong>Imagem:</strong> Colagem dos artistas principais</p>
+                            <p><strong>Texto:</strong> "Qual desses você NÃO PODE perder? 🎤"</p>
+                            <div class="story-options">
+                                <strong>Opções da Enquete:</strong><br>
+                                □ Léo Santana 🦁<br>
+                                □ Gusttavo Lima 🤠<br>
+                                □ Durval Lelys 🎸<br>
+                                □ TODOS! 🔥
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <span class="story-type">Caixinha de Perguntas</span>
+                        <h5>STORY 2: "Já Garantiu Sua Base?"</h5>
+                        <div class="story-content">
+                            <p><strong>Imagem:</strong> Piscina do Cantinho iluminada</p>
+                            <p><strong>Texto:</strong> "Janeiro tá BOMBANDO de shows! Você já resolveu onde vai ficar? 🏠"</p>
+                            <div class="story-options">
+                                <strong>Caixinha:</strong> "Manda aqui qual fim de semana você quer!" 💬
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REEL 2 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">QUA 27/11</span>
+                    <span class="reel-type">Conversão</span>
+                </div>
+                <h3 class="reel-title">REEL 2: "Check-list Perfeito"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Conversão | Mostrar completude da experiência
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"Check-list do verão perfeito:"</li>
+                        <li>"Piscina privativa ✓"</li>
+                        <li>"Área gourmet completa ✓"</li>
+                        <li>"3 quartos confortáveis ✓"</li>
+                        <li>"Guriri a 5min ✓"</li>
+                        <li>"Shows o mês inteiro ✓"</li>
+                        <li>"Preço que cabe no bolso ✓"</li>
+                        <li>"Cantinho do Céu"</li>
+                        <li>"Tudo num lugar só"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Verão perfeito não é sorte, é planejamento. E quando você junta piscina privativa + área gourmet + Guriri pertinho + agenda cheia de shows (Léo Santana 04/01, Gusttavo Lima 17/01, Durval Lelys 16/01, Countrybeat 23/01)... aí sim a mágica acontece. O Cantinho do Céu entrega o pacote completo. Consulta disponibilidade e valores na bio! 🌊✨</p>
+                    <p class="hashtags">#VeraoCompleto #GuririES #AluguelTemporada #TudoNumLugarSo</p>
+                </div>
+
+                <div class="stories-section">
+                    <h4>📲 Stories Interativos do Dia</h4>
+                    
+                    <div class="story-card">
+                        <span class="story-type">Quiz</span>
+                        <h5>STORY 1: "Teste: Você Tá Pronto Pro Verão?"</h5>
+                        <div class="story-content">
+                            <p><strong>Imagem:</strong> Check-list visual com itens marcados</p>
+                            <p><strong>Texto:</strong> "Você já garantiu hospedagem em Guriri? 🤔"</p>
+                            <div class="story-options">
+                                <strong>Opções do Quiz:</strong><br>
+                                □ Sim, tô preparado! ✓<br>
+                                □ Ainda não, mas vou resolver 🏃<br>
+                                □ Nem sabia que precisava 😅<br>
+                                <em>Resposta correta: Opção 1 (reforça urgência)</em>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <span class="story-type">Enquete</span>
+                        <h5>STORY 2: "Piscina ou Praia?"</h5>
+                        <div class="story-content">
+                            <p><strong>Imagem:</strong> Split screen - piscina do Cantinho vs praia de Guriri</p>
+                            <p><strong>Texto:</strong> "No Cantinho do Céu você tem os DOIS! Mas se tivesse que escolher... 🌊"</p>
+                            <div class="story-options">
+                                <strong>Opções da Enquete:</strong><br>
+                                🏊 Piscina privativa<br>
+                                🏖️ Praia de Guriri
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REEL 3 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEX 29/11</span>
+                    <span class="reel-type">Lifestyle</span>
+                </div>
+                <h3 class="reel-title">REEL 3: "Um Dia Aqui"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Lifestyle | Mostrar experiência completa
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"10h - Café na área gourmet"</li>
+                        <li>"11h - Piscina"</li>
+                        <li>"13h - Praia em Guriri"</li>
+                        <li>"15h - Volta pra piscina"</li>
+                        <li>"17h - Aquela soneca"</li>
+                        <li>"20h - Churrasco com a galera"</li>
+                        <li>"23h - Piscina de novo"</li>
+                        <li>"Porque dá"</li>
+                        <li>"Cantinho do Céu 💚"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Férias de verdade não têm roteiro fixo. Têm possibilidade. Aqui você acorda sem despertador, decide na hora o que fazer e vive no SEU ritmo. E quando tem show (e olha que tem MUITO em janeiro: dia 02 Tony Salles, dia 04 Léo Santana, dia 17 Gusttavo Lima...), você vai, curte e volta pra piscina privativa. É isso que um verão em Guriri + Cantinho do Céu entrega: liberdade com estrutura completa. Datas disponíveis na bio! 🌅</p>
+                    <p class="hashtags">#VeraoGuriri #VidaNaPraia #GuririES #FeriasPerfeitas</p>
+                </div>
+
+                <div class="stories-section">
+                    <h4>📲 Stories Interativos do Dia</h4>
+                    
+                    <div class="story-card">
+                        <span class="story-type">Slider</span>
+                        <h5>STORY 1: "Qual Seu Horário Favorito?"</h5>
+                        <div class="story-content">
+                            <p><strong>Imagem:</strong> Sequência de horários (manhã/tarde/noite) no Cantinho</p>
+                            <p><strong>Texto:</strong> "Arrasta pro seu horário favorito do dia! ☀️🌙"</p>
+                            <div class="story-options">
+                                <strong>Slider de Emoji:</strong> ☀️ (Manhã) → 🌅 (Tarde) → 🌙 (Noite)<br>
+                                <em>Qualquer resposta gera: "No Cantinho você aproveita TODOS! 💚"</em>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <span class="story-type">Caixinha de Perguntas</span>
+                        <h5>STORY 2: "Dúvidas Sobre o Cantinho?"</h5>
+                        <div class="story-content">
+                            <p><strong>Imagem:</strong> Área gourmet convidativa</p>
+                            <p><strong>Texto:</strong> "Pergunta qualquer coisa sobre o Cantinho do Céu! 🏡"</p>
+                            <div class="story-options">
+                                <strong>Caixinha:</strong> "Manda sua dúvida aqui!" 💬
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMANA 2 -->
+        <div class="week-section">
+            <div class="week-header">
+                <h2>📅 Semana 2 (02 a 06 Dezembro)</h2>
+                <p>Foco: Urgência + Quebrar Objeções</p>
+            </div>
+
+            <!-- REEL 4 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEG 02/12</span>
+                    <span class="reel-type">Urgência</span>
+                </div>
+                <h3 class="reel-title">REEL 4: "Verão Já Começou"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Urgência | Temporada iniciando
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"Gente"</li>
+                        <li>"O verão já começou"</li>
+                        <li>"Guriri já tá bombando"</li>
+                        <li>"Os shows já foram anunciados"</li>
+                        <li>"As reservas já começaram"</li>
+                        <li>"E você?"</li>
+                        <li>"Ainda pensando?"</li>
+                        <li>"Cantinho do Céu"</li>
+                        <li>"Garante o seu antes que esgote"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Aquela história de "vou deixar pra depois" não funciona em temporada de verão. As melhores datas vão primeiro, os preços sobem depois e você fica refém do que sobrar. A agenda tá confirmada: Tatau (31/12), Léo Santana (04/01), Gusttavo Lima (17/01), Durval Lelys (16/01) e muito mais. O Cantinho do Céu ainda tem disponibilidade boa - mas é questão de DIAS. Link na bio pra não ficar de fora! ⚡🌴</p>
+                    <p class="hashtags">#VeraoGuriri #TemporadaAberta #GuririES #ReservaAgora</p>
+                </div>
+
+                <div class="stories-section">
+                    <h4>📲 Stories Interativos do Dia</h4>
+                    
+                    <div class="story-card">
+                        <span class="story-type">Countdown</span>
+                        <h5>STORY 1: "Contagem Regressiva"</h5>
+                        <div class="story-content">
+                            <p><strong>Imagem:</strong> Calendário destacando dezembro/janeiro</p>
+                            <p><strong>Texto:</strong> "Quanto tempo VOCÊ acha que ainda tem pra reservar? ⏰"</p>
+                            <div class="story-options">
+                                <strong>Sticker Countdown:</strong> Definir para 31/12/2025<br>
+                                <em>Mensagem: "Tá acabando! Garante o seu agora 🚨"</em>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <span class="story-type">Enquete</span>
+                        <h5>STORY 2: "Você Já Reservou?"</h5>
+                        <div class="story-content">
+                            <p><strong>Imagem:</strong> Piscina do Cantinho com texto sobreposto</p>
+                            <p><strong>Texto:</strong> "Hospedagem pro verão em Guriri: você já garantiu? 🏠"</p>
+                            <div class="story-options">
+                                <strong>Opções da Enquete:</strong><br>
+                                ✅ Sim, já tá no papo!<br>
+                                ⏳ Ainda não, mas vou resolver
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REEL 5 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">QUA 04/12</span>
+                    <span class="reel-type">Objeção</span>
+                </div>
+                <h3 class="reel-title">REEL 5: "Desculpa Não Cola"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Objeção | Quebrar resistências
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"Tá longe"</li>
+                        <li>"Guriri é 2h de Vitória"</li>
+                        <li>"Tá caro"</li>
+                        <li>"Divide com a galera"</li>
+                        <li>"Não tenho grupo"</li>
+                        <li>"Vem com a família"</li>
+                        <li>"Já acabou o verão"</li>
+                        <li>"Verão aqui é até março"</li>
+                        <li>"Para de inventar desculpa"</li>
+                        <li>"RESERVA 🔥"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Desculpa não cola mais! Guriri é pertinho, o custo-benefício é real e o verão aqui vai longe. O Cantinho do Céu tem 3 quartos (serve pra família, casal, amigos, qualquer formato), piscina privativa e tá esperando você parar de enrolar. Janeiro tem show quase todo fim de semana: Tony Salles (02/01), Léo Santana (04/01), Durval (16/01), Gusttavo Lima (17/01), Countrybeat (23/01)... Link na bio - bora resolver isso! 😎</p>
+                    <p class="hashtags">#TemporadaVerao #GuririES #AluguelDeTemporada #ParaDeEnrolar</p>
+                </div>
+
+                <div class="stories-section">
+                    <h4>📲 Stories Interativos do Dia</h4>
+                    
+                    <div class="story-card">
+                        <span class="story-type">Quiz</span>
+                        <h5>STORY 1: "Qual Sua Desculpa?"</h5>
+                        <div class="story-content">
+                            <p><strong>Imagem:</strong> Fundo divertido com piscina</p>
+                            <p><strong>Texto:</strong> "Sinceridade: qual a REAL razão de não ter reservado ainda? 🤔"</p>
+                            <div class="story-options">
+                                <strong>Opções do Quiz:</strong><br>
+                                □ Tá caro<br>
+                                □ Tá longe<br>
+                                □ Preguiça mesmo 😅<br>
+                                <em>Todas as respostas levam a: "Resolve AGORA no link da bio! 💚"</em>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <span class="story-type">Caixinha de Perguntas</span>
+                        <h5>STORY 2: "Quantas Pessoas Vão?"</h5>
+                        <div class="story-content">
+                            <p><strong>Imagem:</strong> Área gourmet com capacidade visível</p>
+                            <p><strong>Texto:</strong> "Me conta: quantas pessoas vão na sua? 👥"</p>
+                            <div class="story-options">
+                                <strong>Caixinha:</strong> "Responde aqui o número!" 💬<br>
+                                <em>Usar pra calcular custo por pessoa e responder individualmente</em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REEL 6 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEX 06/12</span>
+                    <span class="reel-type">Lifestyle</span>
+                </div>
+                <h3 class="reel-title">REEL 6: "POV: Você Escolheu Certo"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Lifestyle | Criar desejo
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"POV: você alugou o Cantinho"</li>
+                        <li>"Acordou sem despertador ✓"</li>
+                        <li>"Café com vista pro jardim ✓"</li>
+                        <li>"Piscina o dia inteiro ✓"</li>
+                        <li>"Praia quando der vontade ✓"</li>
+                        <li>"Churrasco de noite ✓"</li>
+                        <li>"Zero neura ✓"</li>
+                        <li>"Isso é verão de verdade"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Tem verão... e tem verão BEM VIVIDO. A diferença? Escolher o lugar certo. Cantinho do Céu = sua casa em Guriri com piscina, área gourmet completa e aquela paz que você anda precisando. E quando rolar show (Léo Santana 04/01, Gusttavo Lima 17/01, Cheiro de Amor 24/01), você já tem tudo resolvido. Marca quem precisa viver isso 👇 Janeiro enchendo rápido! Link na bio 🌊</p>
+                    <p class="hashtags">#POV #VeraoGuriri #GuririES #FeriasPerfeitas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMANA 3 -->
+        <div class="week-section">
+            <div class="week-header">
+                <h2>📅 Semana 3 (09 a 13 Dezembro)</h2>
+                <p>Foco: Shows + Público Específico (Amigos)</p>
+            </div>
+
+            <!-- REEL 7 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEG 09/12</span>
+                    <span class="reel-type">Awareness</span>
+                </div>
+                <h3 class="reel-title">REEL 7: "Janeiro = Shows Non-Stop"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Awareness | Destacar programação janeiro
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"Janeiro em Guriri"</li>
+                        <li>"02/01 - Tony Salles"</li>
+                        <li>"04/01 - Léo Santana 🦁"</li>
+                        <li>"16/01 - Durval Lelys"</li>
+                        <li>"17/01 - Gusttavo Lima 🤠"</li>
+                        <li>"23/01 - Countrybeat"</li>
+                        <li>"E você sem base?"</li>
+                        <li>"Cantinho do Céu resolve"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Janeiro não é brincadeira:<br>
+                    📅 02/01 - Tony Salles<br>
+                    📅 03/01 - Natanzinho, Nattan e Taiana França<br>
+                    📅 04/01 - Léo Santana<br>
+                    📅 16/01 - Durval Lelys<br>
+                    📅 17/01 - Gusttavo Lima<br>
+                    📅 23/01 - Countrybeat<br>
+                    📅 24/01 - Cheiro de Amor<br>
+                    📅 30/01 - Paulo Ricardo<br>
+                    📅 31/01 - Tomaté<br><br>
+
+                    Show após show após show. E quem não garante hospedagem AGORA vai ficar refém de preço absurdo ou, pior, sem lugar. O Cantinho do Céu é sua base estratégica: curte o show, volta pro after na piscina, dorme tranquilo e repete no próximo fim de semana. Janeiro quase lotado - link na bio! 🎤🔥</p>
+                    <p class="hashtags">#ShowsGuriri2026 #JaneiroEmGuriri #LeoSantana #GustavoLima #GuririES</p>
+                </div>
+            </div>
+
+            <!-- REEL 8 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">QUA 11/12</span>
+                    <span class="reel-type">Conversão</span>
+                </div>
+                <h3 class="reel-title">REEL 8: "Galera do After"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Conversão | Público jovem/amigos
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"A resenha não acaba no show"</li>
+                        <li>"Ela só COMEÇA"</li>
+                        <li>"Piscina acesa esperando"</li>
+                        <li>"Som ambiente rolando"</li>
+                        <li>"Churrasco de madrugada"</li>
+                        <li>"Aquela vibe"</li>
+                        <li>"Que só a galera certa entende"</li>
+                        <li>"Cantinho do Céu"</li>
+                        <li>"Onde o after é privativo"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Pra galera que sabe que o melhor do show é o DEPOIS: Cantinho do Céu é isso. Vocês saem do Léo Santana (04/01), do Gusttavo Lima (17/01), do Countrybeat (23/01)... voltam pra piscina acesa, área gourmet liberada, zero vizinho reclamando. 3 quartos pra dividir, estrutura completa pra resenha ir até o sol nascer. Marca os brother e reserva! Link na bio 🍻🌊</p>
+                    <p class="hashtags">#AfterDoShow #ViagemComAmigos #GuririES #GaleraDaResenha</p>
+                </div>
+            </div>
+
+            <!-- REEL 9 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEX 13/12</span>
+                    <span class="reel-type">Lifestyle</span>
+                </div>
+                <h3 class="reel-title">REEL 9: "Fim de Semana em Guriri"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Lifestyle | Experiência completa de FDS
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"FDS em Guriri:"</li>
+                        <li>"Sexta: chegada + piscina"</li>
+                        <li>"Sábado: praia de manhã"</li>
+                        <li>"Almoço na área gourmet"</li>
+                        <li>"Tarde: piscina + descanso"</li>
+                        <li>"Noite: show em Guriri"</li>
+                        <li>"Domingo: churrasco + piscina"</li>
+                        <li>"Segunda: saudade"</li>
+                        <li>"Cantinho do Céu 💚"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Final de semana perfeito tem roteiro? Tem sim! Chega na sexta, curte TUDO que Guriri oferece no sábado (praia de dia + show à noite: 04/01 Léo Santana, 17/01 Gusttavo Lima, 03/01 Natanzinho/Nattan), descansa no domingo na piscina com churrasco e ainda tem sua base privativa o tempo todo. Zero preocupação, máximo aproveitamento. Janeiro enchendo - garante seus FDS! Link na bio 🌅</p>
+                    <p class="hashtags">#FinalDeSemanaGuriri #GuririES #RoteiroPerfeiro #TemporadaVerao</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMANA 4 -->
+        <div class="week-section">
+            <div class="week-header">
+                <h2>📅 Semana 4 (16 a 20 Dezembro)</h2>
+                <p>Foco: Diversificar Públicos + Urgência Final</p>
+            </div>
+
+            <!-- REEL 10 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEG 16/12</span>
+                    <span class="reel-type">Awareness</span>
+                </div>
+                <h3 class="reel-title">REEL 10: "Guriri É Isso"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Awareness | Mostrar a experiência positiva
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"Guriri é..."</li>
+                        <li>"Praia pertinho"</li>
+                        <li>"Shows incríveis"</li>
+                        <li>"Pôr do sol de cinema"</li>
+                        <li>"Comida boa"</li>
+                        <li>"Gente bonita"</li>
+                        <li>"E o Cantinho do Céu?"</li>
+                        <li>"É sua casa no meio disso tudo"</li>
+                        <li>"Vem! 🌊"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Guriri é AQUELE lugar que quem conhece, volta. Praia linda, estrutura boa, vibe de verão autêntica e shows o mês inteiro (Tatau 31/12, Léo Santana 04/01, Durval Lelys 16/01, Gusttavo Lima 17/01, Paulo Ricardo 30/01...). E quando você tem o Cantinho do Céu como base? Aí fica perfeito demais. Piscina privativa pra voltar da praia, área gourmet pra curtir com calma e conforto garantido. Janeiro quase lotado - link na bio! 🏝️✨</p>
+                    <p class="hashtags">#GuririES #DescubraGuriri #VeraoLitoralCapixaba #CantinhoDoCeu</p>
+                </div>
+            </div>
+
+            <!-- REEL 11 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">QUA 18/12</span>
+                    <span class="reel-type">Nicho</span>
+                </div>
+                <h3 class="reel-title">REEL 11: "Casal Precisa de Paz"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Nicho | Público casal/romântico
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"Às vezes o casal"</li>
+                        <li>"Só precisa sumir"</li>
+                        <li>"Sem criança"</li>
+                        <li>"Sem família"</li>
+                        <li>"Sem obrigação"</li>
+                        <li>"Piscina só de vocês"</li>
+                        <li>"Praia quando der vontade"</li>
+                        <li>"Aquele respiro"</li>
+                        <li>"Vocês merecem 💙"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Final de semana romântico não precisa ser caro nem complicado. Precisa de privacidade, conforto e Guriri ali do lado. Cantinho do Céu é perfeito pra esse reset: suíte confortável, piscina privativa e aquela paz que vocês andam precisando. E se quiserem curtir um show (Léo Santana 04/01, Gusttavo Lima 17/01), também dá! Janeiro tem finais de semana livres - link na bio 💙</p>
+                    <p class="hashtags">#FimDeSemanaRomantico #CasalViajante #GuririES #EscapadaACasal</p>
+                </div>
+            </div>
+
+            <!-- REEL 12 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEX 20/12</span>
+                    <span class="reel-type">Urgência Máxima</span>
+                </div>
+                <h3 class="reel-title">REEL 12: "Última Chamada Verão"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Urgência Máxima | Conversão final
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"🚨 ATENÇÃO 🚨"</li>
+                        <li>"Réveillon: últimas vagas"</li>
+                        <li>"Janeiro: quase lotado"</li>
+                        <li>"Shows: confirmados"</li>
+                        <li>"Guriri: esperando"</li>
+                        <li>"Você: ainda indeciso?"</li>
+                        <li>"Cantinho do Céu"</li>
+                        <li>"É AGORA ou nunca"</li>
+                        <li>"Link na bio ⚡"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Se você chegou até aqui e ainda não reservou, esse é o ÚLTIMO AVISO.<br><br>
+
+                    🎆 31/12 - Tatau (Réveillon)<br>
+                    🎤 02/01 - Tony Salles<br>
+                    🦁 04/01 - Léo Santana<br>
+                    🎸 16/01 - Durval Lelys<br>
+                    🤠 17/01 - Gusttavo Lima<br>
+                    🎵 23/01 - Countrybeat<br>
+                    💃 24/01 - Cheiro de Amor<br><br>
+
+                    Réveillon tem 2 vagas, janeiro tá 80% ocupado e os shows vão rolar COM ou SEM você lá. A diferença é: quem age agora curte com conforto. Quem deixa pra depois fica de fora ou paga o dobro. Escolhe! Link na bio 🚨🔥</p>
+                    <p class="hashtags">#UltimasChamada #Reveillon2026 #JaneiroGuriri #GuririES #NaoPercaTempo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMANA 5 -->
+        <div class="week-section">
+            <div class="week-header">
+                <h2>📅 Semana 5 (23 a 27 Dezembro)</h2>
+                <p>Foco: Réveillon + Preparação Janeiro</p>
+            </div>
+
+            <!-- REEL 13 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEG 23/12</span>
+                    <span class="reel-type">Urgência</span>
+                </div>
+                <h3 class="reel-title">REEL 13: "72h Pro Réveillon"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Conversão Urgente | Réveillon
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"Faltam 8 dias"</li>
+                        <li>"Pro Réveillon mais esperado"</li>
+                        <li>"Tatau em Guriri 31/12"</li>
+                        <li>"Você já tem onde ficar?"</li>
+                        <li>"Piscina privativa pro after"</li>
+                        <li>"Área gourmet pra ceia"</li>
+                        <li>"3 quartos pra galera"</li>
+                        <li>"Cantinho do Céu"</li>
+                        <li>"ÚLTIMA vaga! 🚨"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>8 dias pro Réveillon mais aguardado de Guriri e você ainda sem lugar garantido? 🎆 Tatau fecha a virada (31/12) em grande estilo e o Cantinho do Céu tem a ÚLTIMA vaga disponível. Sim, ÚLTIMA mesmo. Piscina privativa pro after, área gourmet pra ceia perfeita e 3 quartos pra galera dormir tranquila. Depois do Réveillon ainda tem Tony Salles (02/01), Léo Santana (04/01) e a sequência toda de janeiro. Quem garantir agora aproveita TUDO. Manda DM URGENTE ou link na bio! ⚡🥂</p>
+                    <p class="hashtags">#Reveillon2026 #Tatau #GuririES #UltimaVaga #AnoNovo</p>
+                </div>
+            </div>
+
+            <!-- REEL 14 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">QUA 25/12</span>
+                    <span class="reel-type">Relacionamento</span>
+                </div>
+                <h3 class="reel-title">REEL 14: "Feliz Natal + Janeiro Tá Logo Ali"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Relacionamento + Lembrete Janeiro
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"🎄 Feliz Natal! 🎄"</li>
+                        <li>"Que seu dia seja especial"</li>
+                        <li>"E já que a família tá reunida..."</li>
+                        <li>"Que tal combinar"</li>
+                        <li>"Janeiro em Guriri?"</li>
+                        <li>"Léo, Gusttavo, Durval..."</li>
+                        <li>"Cantinho do Céu"</li>
+                        <li>"Tem espaço esperando vocês"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>🎄 Feliz Natal pra você e sua família! 🎄<br><br>
+
+                    Que seu dia seja cheio de amor, risadas e aquela comida que só o Natal tem. E já que tá todo mundo reunido... aproveita pra combinar janeiro em Guriri! O Cantinho do Céu ainda tem disponibilidade (mas tá acabando rápido):<br>
+                    - 02/01: Tony Salles<br>
+                    - 04/01: Léo Santana<br>
+                    - 17/01: Gusttavo Lima<br>
+                    - 23/01: Countrybeat<br><br>
+
+                    Piscina privativa, área gourmet completa e a galera toda junta. Esse é o presente que vale a pena! Link na bio 💚🌊</p>
+                    <p class="hashtags">#FelizNatal #Janeiro2026 #GuririES #FeriasSemFamilia</p>
+                </div>
+            </div>
+
+            <!-- REEL 15 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEX 27/12</span>
+                    <span class="reel-type">Conversão</span>
+                </div>
+                <h3 class="reel-title">REEL 15: "Tony Salles Daqui 6 Dias"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Conversão | Primeiro show de janeiro
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"Tony Salles"</li>
+                        <li>"02 de janeiro"</li>
+                        <li>"Daqui 6 dias"</li>
+                        <li>"Você tem ingresso?"</li>
+                        <li>"Ótimo!"</li>
+                        <li>"E tem onde ficar?"</li>
+                        <li>"Cantinho do Céu"</li>
+                        <li>"Resolve isso PRA VOCÊ"</li>
+                        <li>"Link na bio ⚡"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>O ano mal começou e Guriri já entrega: Tony Salles no dia 02/01! 🎤 E tem mais: Natanzinho/Nattan/Taiana França (03/01), Léo Santana (04/01)... janeiro começa VOANDO. Quem não garantiu hospedagem ainda tá correndo risco de ficar sem lugar ou pagar o triplo em cima da hora. O Cantinho do Céu tem estrutura completa: piscina pra relaxar antes do show, área gourmet pra esquenta e 3 quartos pra galera. Janeiro quase esgotado - link na bio! 🔥🌊</p>
+                    <p class="hashtags">#TonySalles #ShowGuriri #Janeiro2026 #GuririES #AluguelTemporada</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMANA 6 -->
+        <div class="week-section">
+            <div class="week-header">
+                <h2>📅 Semana 6 (30 Dez a 03 Jan)</h2>
+                <p>Foco: Virada + Início de Janeiro</p>
+            </div>
+
+            <!-- REEL 16 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEG 30/12</span>
+                    <span class="reel-type">Relacionamento</span>
+                </div>
+                <h3 class="reel-title">REEL 16: "Último Post de 2025"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Relacionamento + Reforço Janeiro
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"Último post de 2025"</li>
+                        <li>"Que ano foi esse!"</li>
+                        <li>"2026 promete mais"</li>
+                        <li>"Tatau amanhã 🎆"</li>
+                        <li>"Janeiro cheio de shows"</li>
+                        <li>"Cantinho do Céu"</li>
+                        <li>"Seu verão começa AGORA"</li>
+                        <li>"Feliz 2026! 🥂"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Último post de 2025! 🎆 Que ano incrível... e 2026 promete ser ainda melhor. Pra quem já garantiu Réveillon no Cantinho: nos vemos AMANHÃ pro show do Tatau! Pra quem ainda tá planejando janeiro: a agenda tá insana - Léo Santana (04/01), Gusttavo Lima (17/01), Durval Lelys (16/01), Countrybeat (23/01), Cheiro de Amor (24/01), Paulo Ricardo (30/01), Tomaté (31/01). E a gente ainda tem disponibilidade pra você curtir tudo isso com conforto, piscina privativa e área gourmet completa. Bora entrar no ano novo com os planos certos? Link na bio. FELIZ 2026! 🥂💚🌊</p>
+                    <p class="hashtags">#FelizAnoNovo #Reveillon2026 #Janeiro2026 #GuririES #VeraoGuriri</p>
+                </div>
+            </div>
+
+            <!-- REEL 17 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">QUA 01/01</span>
+                    <span class="reel-type">Relacionamento</span>
+                </div>
+                <h3 class="reel-title">REEL 17: "Feliz 2026!"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Relacionamento + Awareness Shows
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"FELIZ 2026! 🎆"</li>
+                        <li>"Ano novo"</li>
+                        <li>"Verão novo"</li>
+                        <li>"Memórias novas"</li>
+                        <li>"Tony Salles amanhã (02/01)"</li>
+                        <li>"Léo Santana sábado (04/01)"</li>
+                        <li>"Janeiro mal começou"</li>
+                        <li>"E já tá incrível"</li>
+                        <li>"Cantinho do Céu 🌊"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>FELIZ 2026! 🎆✨<br><br>
+
+                    Ano novo, verão novo, memórias novas pra criar. E pra quem quer começar o ano curtindo cada show, cada praia, cada churrasco sem neura... O Cantinho do Céu tá de portas abertas! Janeiro chegou com TUDO:<br>
+                    🎤 02/01 - Tony Salles (amanhã!)<br>
+                    🦁 04/01 - Léo Santana<br>
+                    🎸 16/01 - Durval Lelys<br>
+                    🤠 17/01 - Gusttavo Lima<br>
+                    🎵 23/01 - Countrybeat<br><br>
+
+                    Piscina privativa, área gourmet completa, 3 quartos e Guriri esperando. Consulta disponibilidade na bio e faz desse janeiro o MELHOR até agora! 🌊🔥</p>
+                    <p class="hashtags">#FelizAnoNovo #Janeiro2026 #GuririES #ShowsGuriri #VeraoGuriri</p>
+                </div>
+            </div>
+
+            <!-- REEL 18 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEX 03/01</span>
+                    <span class="reel-type">Urgência</span>
+                </div>
+                <h3 class="reel-title">REEL 18: "Léo Santana AMANHÃ"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Conversão Urgente | Show iminente
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"🦁 LÉO SANTANA 🦁"</li>
+                        <li>"AMANHÃ"</li>
+                        <li>"04 de janeiro"</li>
+                        <li>"Você tem ingresso?"</li>
+                        <li>"E tem onde ficar depois?"</li>
+                        <li>"Piscina privativa esperando"</li>
+                        <li>"After garantido"</li>
+                        <li>"Cantinho do Céu"</li>
+                        <li>"ÚLTIMA HORA! ⚡"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>🦁 LÉO SANTANA AMANHÃ EM GURIRI! 🔥<br><br>
+
+                    E você JÁ TEM onde ficar depois do show? Porque o after é METADE da experiência! O Cantinho do Céu ainda tem disponibilidade last minute pra esse fim de semana: você curte o Léo, volta pra piscina privativa iluminada, área gourmet pra continuar a resenha e acorda no sábado sem arrependimento de hospedagem ruim. 3 quartos confortáveis, estrutura completa. É HOJE ou nunca! Manda DM URGENTE ou acessa o link na bio ⚡🌊<br><br>
+
+                    E depois do Léo ainda tem: Durval Lelys (16/01), Gusttavo Lima (17/01), Countrybeat (23/01)...</p>
+                    <p class="hashtags">#LeoSantana #Show04Jan #GuririES #AfterDoShow #UltimaHora</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMANA 7 -->
+        <div class="week-section">
+            <div class="week-header">
+                <h2>📅 Semana 7 (05 Jan)</h2>
+                <p>Foco: Retenção + Próximos Shows</p>
+            </div>
+
+            <!-- REEL 19 -->
+            <div class="reel-card">
+                <div class="reel-header">
+                    <span class="reel-date">SEG 05/01</span>
+                    <span class="reel-type">Retenção</span>
+                </div>
+                <h3 class="reel-title">REEL 19: "Janeiro Tá Só Começando"</h3>
+                <div class="reel-objective">
+                    🎯 <strong>Objetivo:</strong> Conversão | Manter momentum
+                </div>
+                
+                <div class="texting-section">
+                    <h4>📱 Texting na Tela:</h4>
+                    <ul class="texting-list">
+                        <li>"Léo Santana foi incrível"</li>
+                        <li>"Mas janeiro tá SÓ COMEÇANDO"</li>
+                        <li>"16/01 - Durval Lelys"</li>
+                        <li>"17/01 - Gusttavo Lima 🤠"</li>
+                        <li>"23/01 - Countrybeat"</li>
+                        <li>"24/01 - Cheiro de Amor"</li>
+                        <li>"30/01 - Paulo Ricardo"</li>
+                        <li>"Você vai perder?"</li>
+                        <li>"Cantinho do Céu ainda tem vaga!"</li>
+                    </ul>
+                </div>
+
+                <div class="caption-section">
+                    <h4>📝 Legenda Completa:</h4>
+                    <p>Quem curtiu Léo Santana esse fim de semana sabe: Guriri 2026 tá ABSURDO! 🦁🔥 E o melhor? Janeiro mal começou. Olha o que vem pela frente:<br><br>
+
+                    🎸 16/01 - Durval Lelys<br>
+                    🤠 17/01 - Gusttavo Lima<br>
+                    🎵 23/01 - Countrybeat<br>
+                    💃 24/01 - Cheiro de Amor<br>
+                    🎤 30/01 - Paulo Ricardo<br>
+                    🎶 31/01 - Tomaté<br><br>
+
+                    O Cantinho do Céu ainda tem disponibilidade pra alguns fins de semana, mas TÁ ACABANDO. Piscina privativa pro descanso entre um show e outro, área gourmet pra resenha, 3 quartos confortáveis. Quem garantir agora aproveita o mês INTEIRO com conforto. Link na bio! 🌊✨</p>
+                    <p class="hashtags">#JaneiroGuriri #ShowsGuriri2026 #GustavoLima #DurvalLelys #GuririES #TemporadaVerao</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESUMO ESTRATÉGICO -->
+        <div class="summary-section">
+            <h2>📊 Resumo Estratégico</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>6</h3>
+                    <p>Reels de Awareness</p>
+                </div>
+                <div class="summary-card">
+                    <h3>9</h3>
+                    <p>Reels de Conversão</p>
+                </div>
+                <div class="summary-card">
+                    <h3>4</h3>
+                    <p>Reels de Relacionamento</p>
+                </div>
+                <div class="summary-card">
+                    <h3>100%</h3>
+                    <p>Foco em Aluguel + Shows</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; padding: 30px; background: rgba(255,255,255,0.2); border-radius: 10px;">
+                <h3 style="margin-bottom: 15px;">🎯 Gatilhos Estratégicos Utilizados:</h3>
+                <ul style="text-align: left; max-width: 600px; margin: 0 auto; line-height: 2;">
+                    <li>✅ Escassez ("últimas vagas", "quase esgotado")</li>
+                    <li>✅ FOMO (shows + sem hospedagem)</li>
+                    <li>✅ Social Proof (galera curtindo)</li>
+                    <li>✅ Urgência Temporal (contagem regressiva)</li>
+                    <li>✅ Lifestyle Aspiracional (verão perfeito)</li>
+                    <li>✅ Comparação Inteligente (custo-benefício)</li>
+                    <li>✅ Datas Específicas dos Shows (credibilidade)</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3>📱 Todos os Reels:</h3>
+                <p style="font-size: 1.1em;">Música + Textos na Tela | Tom Alegre e Festivo 🌊</p>
+                <p style="font-size: 1.1em;">Sem Narração | 100% Visual com Copy Inteligente</p>
+            </div>
+        </div>
+
+        <footer>
+            <p style="font-size: 1.2em; margin-bottom: 10px;">📍 Cantinho do Céu - Guriri, ES</p>
+            <p>Calendário Editorial Verão 2026 | Giz Marketing Digital</p>
+            <p style="margin-top: 20px; opacity: 0.8;">Planejamento estratégico completo: 25/11/2025 a 05/01/2026</p>
+        </footer>
+    </div>
+</body>
+</html>
