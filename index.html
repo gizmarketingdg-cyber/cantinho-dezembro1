@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantinho do Céu - Calendário Editorial Dez/Jan 2026</title>
+    <title>🏖️ Cantinho do Céu - Calendário Editorial Dez/Jan 2026</title>
     <style>
         * {
             margin: 0;
@@ -12,26 +12,27 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
             line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
             padding: 20px;
         }
 
-        header {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
             border-radius: 20px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
         }
 
         header h1 {
@@ -40,187 +41,339 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        header .subtitle {
-            font-size: 1.4em;
+        header p {
+            font-size: 1.3em;
             opacity: 0.95;
-            margin-bottom: 20px;
+            margin: 5px 0;
         }
 
-        .info-box {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .info-grid {
+        .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            padding: 50px 40px;
+            background: #f8f9fa;
         }
 
-        .info-card {
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            padding: 20px;
-            border-radius: 10px;
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #2a5298;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .strategy {
+            padding: 50px 40px;
+            background: white;
+        }
+
+        .strategy h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: #1e3c72;
             text-align: center;
         }
 
-        .info-card h3 {
-            color: #c0392b;
-            margin-bottom: 10px;
-            font-size: 1.8em;
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
 
-        .week-section {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        .strategy-item {
+            background: #e8f4f8;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #2a5298;
+        }
+
+        .strategy-item::before {
+            content: "✓";
+            font-size: 1.5em;
+            color: #2a5298;
+            margin-right: 10px;
+        }
+
+        .content-section {
+            padding: 60px 40px;
+            background: #fafafa;
         }
 
         .week-header {
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 25px;
+            padding: 25px 30px;
+            margin: 40px 0 30px 0;
+            border-radius: 12px;
+            font-size: 1.8em;
+            font-weight: bold;
             text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
-        .week-header h2 {
-            font-size: 2em;
-            margin-bottom: 5px;
+        .post-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 35px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 6px solid #2a5298;
+            transition: transform 0.3s ease;
         }
 
-        .reel-card {
-            background: #f8f9fa;
-            border-left: 5px solid #e74c3c;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 10px;
+        .post-card:hover {
+            transform: translateX(5px);
         }
 
-        .reel-header {
+        .post-card.reel {
+            border-left-color: #e91e63;
+        }
+
+        .post-card.post {
+            border-left-color: #00bcd4;
+        }
+
+        .post-card.especial {
+            border-left-color: #ffd700;
+            background: linear-gradient(to right, #fff9e6 0%, white 100%);
+        }
+
+        .post-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
+            gap: 15px;
         }
 
-        .reel-date {
-            font-size: 1.3em;
+        .post-date {
+            font-size: 1.1em;
             font-weight: bold;
-            color: #e74c3c;
+            color: #1e3c72;
         }
 
-        .reel-type {
-            background: #e74c3c;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
+        .post-type {
+            padding: 8px 20px;
+            border-radius: 25px;
             font-size: 0.9em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .reel-title {
-            font-size: 1.5em;
-            color: #2c3e50;
-            margin-bottom: 15px;
+        .post-type.reel {
+            background: #e91e63;
+            color: white;
         }
 
-        .reel-objective {
-            background: #fff3cd;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-            color: #856404;
+        .post-type.post {
+            background: #00bcd4;
+            color: white;
         }
 
-        .texting-section {
+        .post-type.especial {
+            background: #ffd700;
+            color: #333;
+        }
+
+        .post-title {
+            font-size: 1.8em;
+            margin: 20px 0 15px 0;
+            color: #1e3c72;
+        }
+
+        .post-objetivo {
             background: #e8f4f8;
-            padding: 15px;
+            padding: 12px 20px;
             border-radius: 8px;
-            margin-bottom: 15px;
+            margin: 15px 0;
+            font-weight: 600;
+            color: #2a5298;
         }
 
-        .texting-section h4 {
-            color: #2980b9;
-            margin-bottom: 10px;
+        .post-section {
+            margin: 25px 0;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: "📱";
+            margin-right: 10px;
+            font-size: 1.2em;
         }
 
         .texting-list {
-            list-style: none;
-            padding-left: 0;
+            background: #f8f9fa;
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin: 15px 0;
         }
 
         .texting-list li {
-            padding: 5px 0;
-            padding-left: 20px;
-            position: relative;
+            margin: 8px 0;
+            padding-left: 10px;
+            color: #555;
         }
 
-        .texting-list li:before {
-            content: "📱";
-            position: absolute;
-            left: 0;
+        .legenda-box {
+            background: #fff9e6;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ffd700;
         }
 
-        .caption-section {
-            background: #f0f0f0;
-            padding: 15px;
-            border-radius: 8px;
+        .legenda-text {
+            color: #333;
+            line-height: 1.8;
             margin-bottom: 15px;
         }
 
-        .caption-section h4 {
-            color: #16a085;
-            margin-bottom: 10px;
-        }
-
         .hashtags {
-            color: #3498db;
-            font-style: italic;
-            margin-top: 10px;
-        }
-
-        .story-section {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            padding: 20px;
-            border-radius: 10px;
+            color: #2a5298;
+            font-weight: 600;
             margin-top: 15px;
         }
 
-        .story-section h4 {
-            color: #e91e63;
-            margin-bottom: 10px;
-        }
-
-        .story-content {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #e91e63;
-        }
-
-        .story-type {
-            background: #ff6b9d;
+        .story-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .story-box strong {
+            display: block;
             margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .arte-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .arte-box ul {
+            margin-left: 20px;
+        }
+
+        .arte-box li {
+            margin: 8px 0;
+            color: #1e3c72;
+        }
+
+        .summary {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 50px 40px;
+            margin-top: 50px;
+        }
+
+        .summary h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .summary-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .summary-number {
+            font-size: 3.5em;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .summary-label {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .highlights {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .highlights h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .highlights ul {
+            list-style: none;
+        }
+
+        .highlights li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .highlights li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ade80;
+            font-size: 1.3em;
+            font-weight: bold;
         }
 
         footer {
+            background: #1a1a2e;
+            color: white;
             text-align: center;
             padding: 30px;
-            color: white;
-            margin-top: 40px;
+            font-size: 1.1em;
         }
 
         @media (max-width: 768px) {
@@ -228,9 +381,21 @@
                 font-size: 2em;
             }
             
-            .reel-header {
-                flex-direction: column;
-                align-items: flex-start;
+            header p {
+                font-size: 1em;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+
+            .post-card {
+                padding: 25px 20px;
+            }
+
+            .content-section {
+                padding: 40px 20px;
             }
         }
     </style>
@@ -239,829 +404,1292 @@
     <div class="container">
         <header>
             <h1>🏖️ Cantinho do Céu</h1>
-            <p class="subtitle">Calendário Editorial | Dezembro 2025 - Janeiro 2026</p>
-            <p>Planejamento Estratégico | 04/12/2025 a 10/01/2026</p>
+            <p>Calendário Editorial | Dezembro 2025 - Janeiro 2026</p>
+            <p>Planejamento Estratégico | 12/12/2025 a 31/01/2026</p>
         </header>
 
-        <div class="info-box">
-            <h2 style="text-align: center; color: #e74c3c; margin-bottom: 20px;">📊 Visão Geral</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>17</h3>
-                    <p>Reels Estratégicos</p>
-                </div>
-                <div class="info-card">
-                    <h3>3x</h3>
-                    <p>Posts por Semana</p>
-                </div>
-                <div class="info-card">
-                    <h3>Seg/Qua/Sex</h3>
-                    <p>Frequência</p>
-                </div>
-                <div class="info-card">
-                    <h3>1 Story</h3>
-                    <p>Por Dia de Post</p>
-                </div>
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-number">19</span>
+                <span class="stat-label">Reels Estratégicos</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">9</span>
+                <span class="stat-label">Posts Completos</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Posts Especiais</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">19</span>
+                <span class="stat-label">Stories Interativos</span>
             </div>
         </div>
 
-        <!-- DEZEMBRO - CONFRATERNIZAÇÕES -->
-        <div class="week-section">
+        <div class="strategy">
+            <h2>🎯 Estratégia de Conteúdo</h2>
+            <div class="strategy-grid">
+                <div class="strategy-item">Shows como ISCA (sem oferecer vagas até 17/01)</div>
+                <div class="strategy-item">Destacar vagas de meio de semana naturalmente</div>
+                <div class="strategy-item">Cantinho como casa de temporada completa</div>
+                <div class="strategy-item">Piscina privativa como diferencial principal</div>
+                <div class="strategy-item">Foco em experiências e atrações locais</div>
+                <div class="strategy-item">Tom acolhedor e inclusivo para todos os públicos</div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 style="text-align: center; font-size: 2.5em; color: #1e3c72; margin-bottom: 50px;">📅 Conteúdos Detalhados</h2>
+
+            <!-- SEMANA 1 -->
             <div class="week-header">
-                <h2>🎉 Dezembro (04 a 19) - Foco Confraternizações</h2>
-                <p>Público: Corporativo + Grupos de Amigos</p>
+                🎄 Dezembro - Semana 1 (12 a 15/12)<br>
+                3 Reels (Sex/Sáb/Dom)
             </div>
 
             <!-- REEL 1 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">QUA 04/12</span>
-                    <span class="reel-type">Conversão</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">SEX 12/12 - REEL 1</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 1: "Confraternização em Guriri"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Conversão | Apresentar proposta corporativa
-                </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"Confraternização 2025"</li>
-                        <li>"Piscina privativa ✓"</li>
-                        <li>"Área gourmet completa ✓"</li>
-                        <li>"Praia a 5min ✓"</li>
-                        <li>"Guriri esperando ✓"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Sua equipe merece"</li>
-                        <li>"Dezembro enchendo! 🎉"</li>
-                    </ul>
-                </div>
+                <h3 class="post-title">"Bem-vindo ao Cantinho do Céu"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Apresentação | Awareness</div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>Fim de ano chegando e sua empresa ainda não definiu onde vai celebrar com a equipe? O Cantinho do Céu em Guriri oferece estrutura completa: piscina privativa, área gourmet equipada, 3 quartos + suíte, e Guriri inteira pra explorar (42km de praias com águas mornas, ciclovia estruturada, gastronomia local, Projeto Tamar). Confraternização que vira experiência! Dezembro tem poucas datas disponíveis - RH que planeja cedo garante o melhor. Link na bio! 🎊🏠</p>
-                    <p class="hashtags">#ConfraternizacaoCorporativa #FimDeAno2025 #GuririES #EventoCorporativo #TeamBuilding</p>
-                </div>
-
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Enquete</span>
-                        <p><strong>Imagem:</strong> Equipe corporativa celebrando</p>
-                        <p><strong>Texto:</strong> "Confraternização da sua empresa já foi definida? 🎉"</p>
-                        <p><strong>Opções:</strong> ✅ Sim, já tem! / ⏳ Ainda não (corre!)</p>
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Sua casa de temporada em Guriri"</li>
+                            <li>"Piscina privativa 🏊"</li>
+                            <li>"Área gourmet completa 🍖"</li>
+                            <li>"3 quartos + suíte 🛏️"</li>
+                            <li>"5min da praia 🏖️"</li>
+                            <li>"Janeiro chegando"</li>
+                            <li>"Vagas disponíveis! ✨"</li>
+                        </ul>
                     </div>
+                </div>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Imagina acordar e decidir: praia de manhã ou piscina primeiro? No Cantinho do Céu, você tem essa liberdade! 🏠 Casa de temporada completa em Guriri: piscina privativa só pra você e sua turma, área gourmet equipada, 3 quartos + suíte, ar condicionado e praia a 5 minutos. Janeiro tem vagas - consulte disponibilidade! 🌊✨</p>
+                    <div class="hashtags">#CantinhoDoCéu #GuririES #CasaDeTemporada #FériasEmFamília #VeraoGuriri</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Enquete</strong><br>
+                    "Como você prefere curtir as férias? 🏖️"<br>
+                    Opções: 🏖️ Praia o dia todo / 🏊 Mesclar praia e piscina</p>
                 </div>
             </div>
 
             <!-- REEL 2 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">SEX 06/12</span>
-                    <span class="reel-type">Awareness</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">SÁB 13/12 - REEL 2</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 2: "Guriri É Mais Que Praia"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Awareness | Mostrar variedade de Guriri
-                </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"Guriri não é só praia"</li>
-                        <li>"Tem 42km de orla 🏖️"</li>
-                        <li>"Tem ciclovia estruturada 🚴"</li>
-                        <li>"Tem Praia do Bosque arborizada 🌳"</li>
-                        <li>"Tem pôr do sol incrível 🌅"</li>
-                        <li>"Tem gastronomia local 🍴"</li>
-                        <li>"Tem Projeto Tamar 🐢"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Sua porta de entrada 🌊"</li>
-                    </ul>
-                </div>
+                <h3 class="post-title">"Guriri: 42km de Descobertas"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Mostrar Guriri completo</div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>Guriri é muito mais do que praia (embora a praia seja LINDA!). São 42km de orla com águas mornas e limpas, ciclovia à beira-mar perfeita pra pedal em família, Praia do Bosque com toda aquela sombra natural, pôr do sol que parece cinema, restaurantes locais incríveis com moqueca capixaba, Projeto Tamar com preservação de tartarugas marinhas... E quando você fica no Cantinho do Céu, tem tempo pra conhecer TUDO com calma. Dezembro e janeiro são perfeitos pra explorar! Consulta disponibilidade na bio 🌴✨</p>
-                    <p class="hashtags">#DescubraGuriri #TurismoES #GuririCompleto #LitoralCapixaba #VeraoES</p>
-                </div>
-
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Quiz</span>
-                        <p><strong>Imagem:</strong> Montagem de atrações de Guriri</p>
-                        <p><strong>Texto:</strong> "O que você mais quer fazer em Guriri? 🤔"</p>
-                        <p><strong>Opções:</strong> □ Pedal na ciclovia / □ Curtir a praia / □ Explorar tudo!</p>
-                        <p><em>Resposta correta: Opção 3</em></p>
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Guriri não é só uma praia"</li>
+                            <li>"São 42km de litoral 🏖️"</li>
+                            <li>"Águas mornas e limpas 🌊"</li>
+                            <li>"Ciclovia estruturada 🚴"</li>
+                            <li>"Praia do Bosque arborizada 🌳"</li>
+                            <li>"Barra Nova (rio + mar) 🚣"</li>
+                            <li>"Gastronomia local 🍴"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Seu ponto de partida! 🏠"</li>
+                        </ul>
                     </div>
+                </div>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Guriri é muito mais que praia - é experiência completa! 🌊 42km de litoral com águas mornas, ciclovia pra pedalar vendo o mar, Praia do Bosque toda arborizada (perfeita pra quem quer sombra natural), Barra Nova onde o rio encontra o mar, gastronomia capixaba... E quando você fica no Cantinho do Céu, tem tempo pra conhecer TUDO. Janeiro tem disponibilidade - vamos planejar sua temporada? 🌴</p>
+                    <div class="hashtags">#DescubraGuriri #GuririCompleto #LitoralCapixaba #VeraoES</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Quiz</strong><br>
+                    "Você já conhece Guriri? 🏖️"<br>
+                    Opções: □ Sim, amo! / □ Ainda não / □ Quero conhecer!</p>
                 </div>
             </div>
 
             <!-- REEL 3 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">SEG 09/12</span>
-                    <span class="reel-type">Conversão</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">DOM 14/12 - REEL 3</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 3: "Time que se Conecta"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Conversão | Team building corporativo
+                <h3 class="post-title">"Piscina Privativa: Seu Refúgio"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Destacar diferencial do Cantinho</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Depois de um dia de praia"</li>
+                            <li>"Você volta e..."</li>
+                            <li>"Piscina SÓ PRA VOCÊ"</li>
+                            <li>"Sem esperar vaga"</li>
+                            <li>"Sem dividir espaço"</li>
+                            <li>"Sua família"</li>
+                            <li>"Seu momento"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Privacidade + conforto 🌊"</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"Equipe unida"</li>
-                        <li>"Não acontece em powerpoint"</li>
-                        <li>"Acontece em momentos reais"</li>
-                        <li>"Churrasco juntos"</li>
-                        <li>"Conversas na piscina"</li>
-                        <li>"Risadas de verdade"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Onde time vira família"</li>
-                        <li>"Dezembro ainda tem datas 🤝"</li>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Sabe aquele momento perfeito no fim do dia? Você volta da praia e tem a piscina inteira esperando só por vocês! 🏊 No Cantinho do Céu, a piscina é privativa: você relaxa no seu tempo, as crianças brincam à vontade, e todo mundo curte sem pressa. Janeiro tem vagas disponíveis - consulte e garanta sua temporada! ✨</p>
+                    <div class="hashtags">#PiscinaPrivativa #CantinhoDoCéu #Privacidade #FériasPerfeitas</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Slider</strong><br>
+                    "De 0 a 10, quanto você valoriza privacidade nas férias? 🏊"<br>
+                    Slider: 😐 0 → 10 🤩</p>
+                </div>
+            </div>
+
+            <!-- SEMANA 2 -->
+            <div class="week-header">
+                🎄 Dezembro - Semana 2 (16 a 22/12)<br>
+                2 Reels + 2 Posts
+            </div>
+
+            <!-- POST 1 -->
+            <div class="post-card post">
+                <div class="post-header">
+                    <div class="post-date">SEG 16/12 - POST 1</div>
+                    <div class="post-type post">POST</div>
+                </div>
+                <h3 class="post-title">"Praia do Bosque: Natureza e Conforto"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Apresentar atração local</div>
+
+                <div class="arte-box">
+                    <div class="section-title">🎨 Arte: Carrossel 3 cards</div>
+                    <ul>
+                        <li>Card 1: Praia do Bosque arborizada</li>
+                        <li>Card 2: Sombra natural das árvores</li>
+                        <li>Card 3: Família curtindo</li>
                     </ul>
                 </div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>RH tá buscando lugar pra confraternização de fim de ano? O Cantinho do Céu transforma evento corporativo em memória afetiva. Sua equipe merece mais que mesa de bar: merece espaço pra respirar, piscina pra descontrair, área gourmet pra aquelas conversas que só rolam quando o ambiente permite. Estrutura completa, Guriri ao lado com tudo pra explorar. Investe na equipe de verdade - dezembro tá acabando! Link na bio 🎊</p>
-                    <p class="hashtags">#TeamBuilding #RH #ConfraternizacaoCorporativa #GuririES #EquipeMotivada</p>
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">A Praia do Bosque é aquele lugar especial de Guriri! 🌳 Toda arborizada com sombra natural, águas calmas e rasas ideais pra família, é perfeita pra quem quer curtir a praia com mais conforto. Você arma a barraca na sombra, faz aquele churrasco gostoso enquanto a turma brinca na areia... E depois volta pro Cantinho do Céu pra piscina! Janeiro tem vagas - consulte disponibilidade 🏖️✨</p>
+                    <div class="hashtags">#PraiaDoBosque #GuririES #PraiaArborizada #VeraoEmFamília</div>
                 </div>
 
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Quiz</span>
-                        <p><strong>Imagem:</strong> Equipe colaborando</p>
-                        <p><strong>Texto:</strong> "O que faz uma equipe ser unida de verdade? 🤝"</p>
-                        <p><strong>Opções:</strong> □ Salário bom / □ Conexão real / □ Os dois!</p>
-                        <p><em>Resposta correta: Opção 3</em></p>
-                    </div>
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Enquete</strong><br>
+                    "Você prefere praia com ou sem sombra? 🌳"<br>
+                    Opções: ☀️ No sol / 🌳 Na sombra</p>
                 </div>
             </div>
 
             <!-- REEL 4 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">QUA 11/12</span>
-                    <span class="reel-type">Emocional</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">QUA 18/12 - REEL 4</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 4: "Retrospectiva 2025"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Emocional | Fechamento de ciclo
+                <h3 class="post-title">"Janeiro em Guriri"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Criar urgência + mencionar shows</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Janeiro em Guriri"</li>
+                            <li>"Praia todo dia 🏖️"</li>
+                            <li>"Ciclovia ao nascer do sol 🚴"</li>
+                            <li>"Praia do Bosque à tarde 🌳"</li>
+                            <li>"Shows incríveis 🎤"</li>
+                            <li>"E muito mais!"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Te esperando com conforto!"</li>
+                            <li>"Consulte vagas ✨"</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"2025 foi intenso"</li>
-                        <li>"Projetos entregues"</li>
-                        <li>"Desafios superados"</li>
-                        <li>"Metas batidas"</li>
-                        <li>"E a equipe?"</li>
-                        <li>"Merece comemorar junto"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Celebra conquistas de verdade"</li>
-                        <li>"Dezembro esperando vocês 🏆"</li>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Janeiro em Guriri é especial! Verão chegando com tudo, praia de águas mornas todo dia, ciclovia pra pedalar, Praia do Bosque, Barra Nova, shows incríveis (Léo Santana dia 04/01! 🦁) e muito mais. O Cantinho do Céu oferece estrutura completa pra você aproveitar cada momento: piscina privativa, área gourmet, conforto total. Janeiro tem disponibilidade - não deixe pra última hora! 🌊🔥</p>
+                    <div class="hashtags">#JaneiroGuriri #VeraoGuriri #VerãoES #FériasDeVerão</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Countdown</strong><br>
+                    "Quanto tempo falta pro verão? ☀️"<br>
+                    Countdown para 21/12/2025<br>
+                    CTA: "Janeiro disponível!"</p>
+                </div>
+            </div>
+
+            <!-- POST 2 -->
+            <div class="post-card post">
+                <div class="post-header">
+                    <div class="post-date">SEX 20/12 - POST 2</div>
+                    <div class="post-type post">POST</div>
+                </div>
+                <h3 class="post-title">"Barra Nova: Onde Rio Encontra Mar"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Mostrar atração diferenciada</div>
+
+                <div class="arte-box">
+                    <div class="section-title">🎨 Arte: Carrossel 3 cards</div>
+                    <ul>
+                        <li>Card 1: Encontro rio + mar em Barra Nova</li>
+                        <li>Card 2: Passeio de barco</li>
+                        <li>Card 3: Águas calmas e família</li>
                     </ul>
                 </div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>Final de ano é hora de olhar pra trás e reconhecer: a equipe entregou MUITO. E comemoração de verdade não é cerveja rápida no happy hour. É reunir todo mundo num lugar bonito, com estrutura, com tempo pra conversar de verdade. O Cantinho do Céu oferece isso: espaço pra celebrar conquistas, piscina pra descomprimir, área gourmet pra aquele brinde memorável. Sua empresa fecha 2025 bem? Dezembro tem poucas datas! Link na bio 🥂✨</p>
-                    <p class="hashtags">#Retrospectiva2025 #FechandoCiclo #Conquistas #ConfraternizacaoES #GuririES</p>
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Barra Nova é aquele programa diferente que todo mundo ama! 🌊 É onde o Rio Mariricu encontra o mar, formando uma praia de águas mornas e calmas perfeita pra família. Tem passeio de barco pelo manguezal, pedalinho, pesca e aquela infraestrutura com restaurantes locais. É rio E mar no mesmo lugar! Inclua no seu roteiro quando ficar no Cantinho do Céu. Janeiro tem disponibilidade! 🚣‍♂️✨</p>
+                    <div class="hashtags">#BarraNova #GuririES #RioEMar #PasseioEmFamília</div>
                 </div>
 
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Slider</span>
-                        <p><strong>Imagem:</strong> "2025" em destaque</p>
-                        <p><strong>Texto:</strong> "De 0 a 10, como foi seu 2025? ⭐"</p>
-                        <p><strong>Slider:</strong> 0 → 10</p>
-                    </div>
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Quiz</strong><br>
+                    "Você prefere praia ou rio? 🌊"<br>
+                    Opções: □ Praia / □ Rio / □ Os dois!<br>
+                    <em>Resposta: "Os dois! Barra Nova tem! 💚"</em></p>
                 </div>
             </div>
 
             <!-- REEL 5 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">SEX 13/12</span>
-                    <span class="reel-type">Lifestyle</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">DOM 21/12 - REEL 5</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 5: "FDS Completo em Guriri"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Lifestyle | Experiência turística
-                </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"FDS completo em Guriri:"</li>
-                        <li>"Sábado cedo: pedal na ciclovia 🚴"</li>
-                        <li>"Manhã: praia"</li>
-                        <li>"Tarde: Praia do Bosque"</li>
-                        <li>"Noite: moqueca capixaba"</li>
-                        <li>"Domingo: conhecer Projeto Tamar"</li>
-                        <li>"Tarde: piscina no Cantinho"</li>
-                        <li>"Guriri tem muito pra fazer"</li>
-                        <li>"Vem! 🌊"</li>
-                    </ul>
-                </div>
+                <h3 class="post-title">"Área Gourmet: Seu Espaço Completo"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Mostrar estrutura do Cantinho</div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>Pra quem não quer só "deitar na praia", Guriri é o destino perfeito! Ciclovia estruturada ao longo da orla, Praia do Bosque com sombra natural, gastronomia local maravilhosa (aquela moqueca capixaba!), Projeto Tamar pra conhecer de perto o trabalho com tartarugas marinhas, e muito mais. E quando você fica no Cantinho do Céu, tem a piscina privativa esperando depois de cada passeio. Final de semana que recarrega as energias DE VERDADE. Dezembro tem disponibilidade - consulta na bio! 🚴‍♂️🐢🌳</p>
-                    <p class="hashtags">#FinsDeSemanaGuriri #TurismoGuriri #GuririES #ExploraGuriri #LitoralCapixaba</p>
-                </div>
-
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Enquete</span>
-                        <p><strong>Imagem:</strong> Atividades em Guriri</p>
-                        <p><strong>Texto:</strong> "Você prefere FDS agitado ou tranquilo? 🌊"</p>
-                        <p><strong>Opções:</strong> 🚴 Agitado / 😴 Tranquilo</p>
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Área gourmet do Cantinho:"</li>
+                            <li>"Churrasqueira com bancada ✓"</li>
+                            <li>"Geladeira ✓"</li>
+                            <li>"Fogão ✓"</li>
+                            <li>"Pia ✓"</li>
+                            <li>"Mesa grande na varanda ✓"</li>
+                            <li>"Tudo equipado!"</li>
+                            <li>"Faça seu churrasco"</li>
+                            <li>"Do seu jeito! 🍖"</li>
+                        </ul>
                     </div>
                 </div>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">A área gourmet do Cantinho do Céu é aquele espaço que você sonha pras férias! 🍖 Churrasqueira com bancada grande, geladeira, fogão, tudo equipado pra você fazer aquele churrasco caprichado, café da manhã reforçado ou jantar especial. E tem mesa grande na varanda pra todo mundo se reunir! É SUA casa em Guriri - você decide o cardápio! Janeiro tem vagas disponíveis - consulte e planeje suas férias perfeitas! 🌴✨</p>
+                    <div class="hashtags">#ÁreaGourmet #CantinhoDoCéu #ChurrascoNasFerias #EstruturaCompleta</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Enquete</strong><br>
+                    "O que não pode faltar no seu churrasco? 🍖"<br>
+                    Opções: 🥩 Picanha / 🐔 Frango</p>
+                </div>
+            </div>
+
+            <!-- SEMANA 3 -->
+            <div class="week-header">
+                🎄 Dezembro - Semana 3 (23 a 25/12)<br>
+                1 Reel + POST ESPECIAL NATAL
             </div>
 
             <!-- REEL 6 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">SEG 16/12</span>
-                    <span class="reel-type">Urgência</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">SEG 23/12 - REEL 6</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 6: "Última Semana Útil"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Urgência | Fechamento corporativo
+                <h3 class="post-title">"Verão Chegando"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Awareness verão + disponibilidade</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Verão chegando 🌞"</li>
+                            <li>"Guriri esperando você"</li>
+                            <li>"42km de praia 🏖️"</li>
+                            <li>"Águas mornas perfeitas 🌡️"</li>
+                            <li>"Ciclovia + passeios 🚴"</li>
+                            <li>"Praia do Bosque 🌳"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Seu refúgio de verão"</li>
+                            <li>"Janeiro disponível! ✨"</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"Última semana útil de 2025"</li>
-                        <li>"Sua empresa vai fazer o quê?"</li>
-                        <li>"Mandar todo mundo embora?"</li>
-                        <li>"Ou..."</li>
-                        <li>"Reunir a equipe"</li>
-                        <li>"Num lugar especial"</li>
-                        <li>"Pra fechar o ano bem?"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Últimas datas de dezembro! 🚨"</li>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">O verão tá chegando e Guriri é o destino perfeito! ☀️ Águas mornas, 42km de litoral pra explorar, ciclovia estruturada, Praia do Bosque arborizada, Barra Nova e muito mais... O Cantinho do Céu te recebe com estrutura completa: piscina privativa, área gourmet equipada, conforto total. Janeiro e fevereiro ainda têm disponibilidade! Vamos planejar seu verão? 🌊✨</p>
+                    <div class="hashtags">#VeraoGuriri #Verão2026 #GuririES #FériasDeVerão</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Slider de Emoji</strong><br>
+                    "Qual sua expectativa pro verão? 🌞"<br>
+                    Slider: 😐 → 🤩</p>
+                </div>
+            </div>
+
+            <!-- POST ESPECIAL NATAL -->
+            <div class="post-card especial">
+                <div class="post-header">
+                    <div class="post-date">QUA 25/12 - POST ESPECIAL</div>
+                    <div class="post-type especial">⭐ ESPECIAL NATAL ⭐</div>
+                </div>
+                <h3 class="post-title">"Mensagem de Natal da Leidy"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Relacionamento | Mensagem pessoal</div>
+
+                <div class="arte-box">
+                    <div class="section-title">🎨 Arte: Card único especial</div>
+                    <ul>
+                        <li>Imagem: Decoração natalina elegante + logo Cantinho</li>
+                        <li>Foto ou assinatura da Leidy</li>
+                        <li>Texto: Mensagem personalizada</li>
                     </ul>
                 </div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>Semana do Natal chegando e muita empresa ainda não definiu como vai fechar o ano com a equipe. O Cantinho do Céu ainda tem POUCAS datas disponíveis entre 20 e 27/12: dia de equipe completo, confraternização que vira lembrança, espaço pra todo mundo respirar. RH que deixa pro último minuto perde vaga! Link na bio 🎊</p>
-                    <p class="hashtags">#UltimaSemana #ConfraUrgente #Dezembro2025 #RH #GuririES</p>
+                <div class="legenda-box" style="background: #fff0f0; border-left-color: #c41e3a;">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text" style="font-size: 1.1em;">
+                        <strong>🎄 FELIZ NATAL! 🎄</strong><br><br>
+                        
+                        Quero desejar a cada um de vocês um Natal repleto de amor, paz e momentos especiais ao lado de quem mais importa. 💚<br><br>
+                        
+                        Que esta data traga renovação, gratidão e aquele aconchego que só o Natal proporciona. Agradeço por cada família que já passou pelo Cantinho do Céu e por cada nova história que ainda vamos compartilhar.<br><br>
+                        
+                        Que 2026 seja um ano de realizações, saúde e muitas memórias felizes!<br><br>
+                        
+                        <strong>Com carinho,<br>
+                        Leidy</strong><br>
+                        <em>Cantinho do Céu</em> 🏠🌊
+                    </p>
+                    <div class="hashtags">#FelizNatal #CantinhoDoCéu #Gratidão #AmorEPaz</div>
                 </div>
 
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Countdown</span>
-                        <p><strong>Imagem:</strong> Calendário</p>
-                        <p><strong>Texto:</strong> "Quantos dias faltam pro fim do ano? ⏰"</p>
-                        <p><strong>Countdown:</strong> Para 31/12/2025</p>
-                        <p><strong>CTA:</strong> "Garante dezembro agora!"</p>
-                    </div>
+                <div class="story-box" style="background: linear-gradient(135deg, #c41e3a 0%, #801428 100%);">
+                    <strong>📲 Story:</strong>
+                    <p><strong>Story Estático Elegante</strong><br>
+                    Imagem: Decoração natalina + mensagem<br>
+                    "🎄 FELIZ NATAL! Que seu dia seja abençoado! 💚 - Leidy, Cantinho do Céu"</p>
                 </div>
+            </div>
+
+            <!-- SEMANA 4 -->
+            <div class="week-header">
+                🎄 Dezembro - Semana 4 (26 a 29/12)<br>
+                2 Reels + 1 Post
             </div>
 
             <!-- REEL 7 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">QUA 18/12</span>
-                    <span class="reel-type">Conversão</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">QUI 26/12 - REEL 7</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 7: "Confra da Galera"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Conversão | Grupo de amigos
+                <h3 class="post-title">"O Que Esperar do Cantinho do Céu"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Mostrar experiência completa</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"No Cantinho do Céu você tem:"</li>
+                            <li>"Piscina privativa 🏊"</li>
+                            <li>"3 quartos + suíte 🛏️"</li>
+                            <li>"Área gourmet completa 🍖"</li>
+                            <li>"Ar condicionado ❄️"</li>
+                            <li>"WiFi ✓"</li>
+                            <li>"Estacionamento ✓"</li>
+                            <li>"5min da praia 🏖️"</li>
+                            <li>"Sua casa de verão! 🌴"</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"A tradição da galera"</li>
-                        <li>"Todo dezembro"</li>
-                        <li>"Mesmo grupo"</li>
-                        <li>"Mesma confra"</li>
-                        <li>"Esse ano"</li>
-                        <li>"Que tal surpreender?"</li>
-                        <li>"Guriri + Cantinho do Céu"</li>
-                        <li>"Confra que vira viagem"</li>
-                        <li>"FDS de dezembro! 🎄"</li>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Olha só o que te espera no Cantinho do Céu! 🏠 Estrutura completa pra você curtir Guriri com conforto: piscina privativa (só sua!), 3 quartos + suíte (acomoda família ou grupo de amigos!), área gourmet equipada, ar condicionado, WiFi, estacionamento e praia pertinho. É sua casa de temporada - você chega, relaxa e aproveita! Janeiro ainda tem disponibilidade. Link na bio! 🌊✨</p>
+                    <div class="hashtags">#CantinhoDoCéu #EstruturaCompleta #GuririES #FériasConfortáveis</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Enquete</strong><br>
+                    "O que é mais importante nas férias? 🏠"<br>
+                    Opções: 🏊 Conforto / 🏖️ Localização</p>
+                </div>
+            </div>
+
+            <!-- POST 3 -->
+            <div class="post-card post">
+                <div class="post-header">
+                    <div class="post-date">SÁB 27/12 - POST 3</div>
+                    <div class="post-type post">POST</div>
+                </div>
+                <h3 class="post-title">"Ciclovia de Guriri: Pedal com Vista"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Mostrar atração para todos os públicos</div>
+
+                <div class="arte-box">
+                    <div class="section-title">🎨 Arte: Carrossel 3 cards</div>
+                    <ul>
+                        <li>Card 1: Ciclovia ao longo da orla</li>
+                        <li>Card 2: Pôr do sol na ciclovia</li>
+                        <li>Card 3: Pessoas pedalando/caminhando</li>
                     </ul>
                 </div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>Aquela confraternização tradicional da galera TODO dezembro? Que tal fazer diferente esse ano? Transforma em FDS em Guriri: vocês alugam o Cantinho, todo mundo contribui, curtem praia, ciclovias, gastronomia local, fazem o amigo secreto na piscina, churrasco caprichado e ainda tem espaço pra dormir (3 quartos + suíte). Vira tradição nova! Dezembro tem últimos FDS disponíveis. Marca a galera e resolve! Link na bio 🎁💚</p>
-                    <p class="hashtags">#TradiacaoDaGalera #AmigoSecreto #ConfraComAmigos #GuririES #Dezembro</p>
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">A ciclovia de Guriri é perfeita pra começar o dia com energia! 🚴 Estruturada ao longo de toda orla, você pedala ou caminha vendo o mar, sente a brisa, aproveita o nascer do sol... São quilômetros de ciclovia linda pra curtir com calma. E depois? Volta pro Cantinho do Céu pra aquele mergulho na piscina! Janeiro tem disponibilidade - consulte! 🌅🌊</p>
+                    <div class="hashtags">#CicloviaGuriri #GuririES #PedalNaPraia #VidaAtiva</div>
                 </div>
 
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Caixinha de Perguntas</span>
-                        <p><strong>Imagem:</strong> Grupo de amigos</p>
-                        <p><strong>Texto:</strong> "Há quantos anos vocês fazem confra juntos? 👥"</p>
-                        <p><strong>Caixinha:</strong> "Responde!" 💬</p>
-                    </div>
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Quiz</strong><br>
+                    "Como você prefere começar o dia de férias? 🌅"<br>
+                    Opções: □ Pedal/caminhada / □ Praia direto / □ Piscina<br>
+                    <em>Todas: "Guriri tem espaço pra tudo! 💚"</em></p>
                 </div>
-            </div>
-        </div>
-
-        <!-- DEZEMBRO - TRANSIÇÃO SHOWS -->
-        <div class="week-section">
-            <div class="week-header">
-                <h2>🎆 Dezembro (20 a 30) - Transição Verão</h2>
-                <p>Foco: Janeiro + Shows + Turismo</p>
             </div>
 
             <!-- REEL 8 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">SEX 20/12</span>
-                    <span class="reel-type">Urgência</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">DOM 28/12 - REEL 8</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 8: "Janeiro Chegando"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Urgência | Temporada janeiro
+                <h3 class="post-title">"Janeiro Quase Chegando"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Urgência suave + disponibilidade</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Janeiro a poucos dias"</li>
+                            <li>"Guriri em alta temporada"</li>
+                            <li>"Praia + sol + diversão"</li>
+                            <li>"Shows toda semana 🎤"</li>
+                            <li>"Atrações pra toda família"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Ainda tem vagas"</li>
+                            <li>"Não deixe pra depois! ⚡"</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"Janeiro chegando"</li>
-                        <li>"Guriri: praia + diversão"</li>
-                        <li>"Ciclovia + gastronomia"</li>
-                        <li>"Natureza + cultura"</li>
-                        <li>"E também shows incríveis"</li>
-                        <li>"Você: ainda indeciso?"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Janeiro enchendo!"</li>
-                        <li>"Link na bio ⚡"</li>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Janeiro tá logo ali e Guriri vai estar incrível! 🌊 Verão em alta, praia de águas mornas todo dia, shows toda semana, ciclovia, Praia do Bosque, Barra Nova e muito mais... O Cantinho do Céu ainda tem disponibilidade, mas tá acabando! Se você quer garantir sua temporada, é hora de decidir. Consulte datas disponíveis! ⚡✨</p>
+                    <div class="hashtags">#JaneiroChegando #GuririES #VerãoGuriri #NãoDeixePraDepois</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Countdown</strong><br>
+                    "Faltam poucos dias pro janeiro! 🎆"<br>
+                    Countdown para 01/01/2026<br>
+                    CTA: "Garanta sua vaga!"</p>
+                </div>
+            </div>
+
+            <!-- SEMANA 5 -->
+            <div class="week-header">
+                🎆 Dez/Jan - Semana 5 (30/12 a 05/01)<br>
+                1 Post + REEL ESPECIAL ANO NOVO + 2 Reels
+            </div>
+
+            <!-- POST 4 -->
+            <div class="post-card post">
+                <div class="post-header">
+                    <div class="post-date">SEG 30/12 - POST 4</div>
+                    <div class="post-type post">POST</div>
+                </div>
+                <h3 class="post-title">"Retrospectiva 2025 + Janeiro Chegando"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Fechamento ano + reforço disponibilidade</div>
+
+                <div class="arte-box">
+                    <div class="section-title">🎨 Arte: Carrossel 2 cards</div>
+                    <ul>
+                        <li>Card 1: "2025 → 2026" elegante</li>
+                        <li>Card 2: "Janeiro em Guriri" + Cantinho</li>
                     </ul>
                 </div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>Janeiro em Guriri é o mês mais completo do litoral capixaba: 42km de praias com águas mornas, ciclovia estruturada, Praia do Bosque, gastronomia local maravilhosa, Projeto Tamar, pôr do sol de cinema... e também muitos shows! É temporada alta e tá enchendo rápido. O Cantinho do Céu oferece piscina privativa, área gourmet completa e estrutura pra você aproveitar TUDO. Quem reserva agora garante conforto. Link na bio! 🌊🔥</p>
-                    <p class="hashtags">#JaneiroGuriri #TemporadaVerao #GuririES #VeraoCompleto</p>
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">2025 foi um ano especial! Recebemos famílias incríveis, vimos momentos lindos sendo criados no Cantinho do Céu, e cada história nos encheu de gratidão. 💚 E 2026 promete ser ainda melhor! Janeiro já começou com reservas, mas ainda temos disponibilidade pra quem quer começar o ano com os pés na areia. Vamos planejar suas férias? Link na bio! 🌊✨</p>
+                    <div class="hashtags">#Retrospectiva2025 #2026Chegando #Janeiro2026 #GuririES</div>
                 </div>
 
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Countdown</span>
-                        <p><strong>Imagem:</strong> Praia + verão</p>
-                        <p><strong>Texto:</strong> "Faltam quantos dias pro verão em Guriri? ☀️"</p>
-                        <p><strong>Countdown + CTA:</strong> "Garante janeiro!"</p>
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Slider</strong><br>
+                    "Como foi seu 2025? ⭐"<br>
+                    Slider: 0 → 10</p>
+                </div>
+            </div>
+
+            <!-- REEL ESPECIAL ANO NOVO -->
+            <div class="post-card especial">
+                <div class="post-header">
+                    <div class="post-date">TER 31/12 - REEL ESPECIAL</div>
+                    <div class="post-type especial">⭐ ESPECIAL ANO NOVO ⭐</div>
+                </div>
+                <h3 class="post-title">"Mensagem de Ano Novo - Leidy"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Relacionamento | Mensagem pessoal da dona</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"FELIZ 2026! 🎆"</li>
+                            <li>"Que venha repleto de:"</li>
+                            <li>"Saúde 💚"</li>
+                            <li>"Realizações ✨"</li>
+                            <li>"Viagens 🌊"</li>
+                            <li>"Momentos felizes 😊"</li>
+                            <li>"Família reunida 🏠"</li>
+                            <li>"E muito mar! 🏖️"</li>
+                            <li>"Com carinho, Leidy"</li>
+                            <li>"Cantinho do Céu 🌴"</li>
+                        </ul>
                     </div>
+                </div>
+
+                <div class="legenda-box" style="background: #fff0f0; border-left-color: #ffd700;">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text" style="font-size: 1.1em;">
+                        <strong>🎆 FELIZ ANO NOVO! 🎆</strong><br><br>
+                        
+                        2025 foi um ano de muitas alegrias e aprendizados. Recebi vocês no Cantinho do Céu com tanto carinho, e cada família que passou por aqui levou um pedacinho do meu coração. 💚<br><br>
+                        
+                        Que 2026 traga saúde, realizações, muitas viagens e momentos inesquecíveis ao lado de quem você ama. O Cantinho do Céu estará de portas abertas pra receber vocês com o mesmo carinho de sempre!<br><br>
+                        
+                        Janeiro e fevereiro têm vagas - vamos criar novas memórias juntos? 🌊✨<br><br>
+                        
+                        <strong>Com todo meu carinho,<br>
+                        Leidy</strong><br>
+                        <em>Cantinho do Céu</em>
+                    </p>
+                    <div class="hashtags">#FelizAnoNovo #2026 #CantinhoDoCéu #Gratidão #NovosComeços</div>
+                </div>
+
+                <div class="story-box" style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);">
+                    <strong>📲 Story:</strong>
+                    <p style="color: #333;"><strong>Story Elegante com GIF</strong><br>
+                    "🎆 FELIZ 2026! 🎆<br>
+                    Que seja um ano de muitas realizações e viagens inesquecíveis!<br>
+                    Com carinho, Leidy - Cantinho do Céu 💚🌊"</p>
                 </div>
             </div>
 
             <!-- REEL 9 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">SEG 23/12</span>
-                    <span class="reel-type">Awareness</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">SEX 02/01 - REEL 9</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 9: "Janeiro em Guriri"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Awareness | Mostrar programação janeiro
-                </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"Janeiro em Guriri"</li>
-                        <li>"Praia todos os dias"</li>
-                        <li>"Ciclovia pra pedalar"</li>
-                        <li>"Praia do Bosque"</li>
-                        <li>"Projeto Tamar"</li>
-                        <li>"Gastronomia local"</li>
-                        <li>"E shows toda semana"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Seu verão completo! 🌊"</li>
-                    </ul>
-                </div>
+                <h3 class="post-title">"Janeiro Começou!"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Reforçar disponibilidade + momentum</div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>Janeiro em Guriri não tem como ser ruim. Você acorda e escolhe: praia de manhã, pedal na ciclovia, visita ao Projeto Tamar, almoço com moqueca capixaba, tarde na Praia do Bosque... e ainda tem shows quase todo fim de semana! O Cantinho do Céu é perfeito pra quem quer aproveitar tudo: piscina privativa pra descansar, área gourmet pra resenha e estrutura completa. Janeiro enchendo - link na bio! 🎤🏖️</p>
-                    <p class="hashtags">#JaneiroGuriri #VeraoCompleto #GuririES #LitoralCapixaba</p>
-                </div>
-
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Enquete</span>
-                        <p><strong>Imagem:</strong> Mix de atrações</p>
-                        <p><strong>Texto:</strong> "Você já conhece Guriri? 🏖️"</p>
-                        <p><strong>Opções:</strong> ✅ Sim, amo! / ❌ Ainda não</p>
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Janeiro começou! 🎆"</li>
+                            <li>"E Guriri tá linda"</li>
+                            <li>"Praia de águas mornas 🌊"</li>
+                            <li>"Sol todos os dias ☀️"</li>
+                            <li>"Ciclovia + passeios 🚴"</li>
+                            <li>"Shows toda semana 🎤"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Vem curtir seu verão!"</li>
+                            <li>"Consulte vagas ✨"</li>
+                        </ul>
                     </div>
+                </div>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Janeiro chegou e Guriri já tá maravilhosa! ☀️ Águas mornas perfeitas, sol radiante, ciclovia pra pedalar, Praia do Bosque, Barra Nova, shows toda semana (Léo Santana amanhã dia 04!)... O Cantinho do Céu te espera com estrutura completa: piscina privativa, área gourmet, conforto total. Janeiro e fevereiro ainda têm disponibilidade! Link na bio 🌊🔥</p>
+                    <div class="hashtags">#JaneiroGuriri #Verão2026 #GuririES #FériasDeVerão</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Story Animado</strong><br>
+                    "🎆 JANEIRO CHEGOU! Quem tá pronto pro verão em Guriri? 🏖️☀️"</p>
                 </div>
             </div>
 
             <!-- REEL 10 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">QUA 25/12</span>
-                    <span class="reel-type">Relacionamento</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">DOM 04/01 - REEL 10</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 10: "Feliz Natal"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Relacionamento + Lembrete Janeiro
+                <h3 class="post-title">"Léo Santana Hoje + Temporada Começou"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Usar show como conteúdo + não oferecer FDS</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"🦁 LÉO SANTANA HOJE 🦁"</li>
+                            <li>"Guriri em festa!"</li>
+                            <li>"Verão tá só começando"</li>
+                            <li>"Janeiro inteiro pela frente"</li>
+                            <li>"Fevereiro também"</li>
+                            <li>"Praia + shows + diversão"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Consulte disponibilidade! 🎯"</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"🎄 Feliz Natal! 🎄"</li>
-                        <li>"Que seu dia seja especial"</li>
-                        <li>"E já que a família tá reunida..."</li>
-                        <li>"Que tal combinar"</li>
-                        <li>"Janeiro em Guriri?"</li>
-                        <li>"Praia, shows, diversão..."</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Tem espaço esperando vocês"</li>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">🦁 LÉO SANTANA HOJE EM GURIRI! 🔥 A temporada começou com tudo! E olha, janeiro e fevereiro inteiros pela frente com muita praia, shows, passeios e diversão. O Cantinho do Céu ainda tem disponibilidade pra quem quer aproveitar o verão completo. Não deixe pra última hora - consulte datas livres! ⚡🌊</p>
+                    <div class="hashtags">#LeoSantana #GuririES #ShowsGuriri #Verão2026</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Countdown</strong><br>
+                    "🦁 LÉO SANTANA HOJE! 🔥"<br>
+                    Countdown para 04/01/2026 22:00<br>
+                    CTA: "Janeiro ainda tem vagas! 📲"</p>
+                </div>
+            </div>
+
+            <!-- SEMANA 6 -->
+            <div class="week-header">
+                🌊 Janeiro - Semana 6 (06 a 12/01)<br>
+                2 Reels + 2 Posts
+            </div>
+
+            <!-- POST 5 -->
+            <div class="post-card post">
+                <div class="post-header">
+                    <div class="post-date">SEG 06/01 - POST 5</div>
+                    <div class="post-type post">POST</div>
+                </div>
+                <h3 class="post-title">"Roteiro: 1 Semana Perfeita em Guriri"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Mostrar experiência completa</div>
+
+                <div class="arte-box">
+                    <div class="section-title">🎨 Arte: Carrossel 5 cards</div>
+                    <ul>
+                        <li>Card 1: "Seu roteiro em Guriri"</li>
+                        <li>Card 2: "Dia 1-2: Praia principal + ciclovia"</li>
+                        <li>Card 3: "Dia 3-4: Praia do Bosque + churrasco"</li>
+                        <li>Card 4: "Dia 5-6: Barra Nova + passeios"</li>
+                        <li>Card 5: "Dia 7: Relaxa na piscina do Cantinho"</li>
                     </ul>
                 </div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>🎄 Feliz Natal pra você e sua família! 🎄 Que seu dia seja cheio de amor, risadas e aquela comida que só o Natal tem. E já que tá todo mundo reunido... aproveita pra combinar janeiro em Guriri! O Cantinho do Céu ainda tem disponibilidade: piscina privativa, área gourmet completa e a galera toda junta. Janeiro tem praia, shows, ciclovia, Projeto Tamar, gastronomia... Esse é o presente que vale a pena! Link na bio 💚🌊</p>
-                    <p class="hashtags">#FelizNatal #Janeiro2026 #GuririES #FeriasEmFamilia</p>
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">1 semana em Guriri é tempo perfeito pra conhecer tudo! 🗓️ Dias 1-2 você curte a praia principal e pedala na ciclovia, dias 3-4 vai pra Praia do Bosque fazer aquele churrasco na sombra, dias 5-6 explora Barra Nova com passeios de barco, e no último dia relaxa na piscina privativa do Cantinho. Janeiro e fevereiro têm disponibilidade - planeje sua semana perfeita! 🌊✨</p>
+                    <div class="hashtags">#RoteiroGuriri #SemanaPerfeira #GuririCompleto #PlanejeSuasFerias</div>
                 </div>
 
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Story Estático com GIF</span>
-                        <p><strong>Imagem:</strong> Decoração natalina + logo Cantinho</p>
-                        <p><strong>Texto:</strong> "🎄 FELIZ NATAL! 🎄 Que seu dia seja cheio de amor e alegria! 💚"</p>
-                        <p><em>Sem interação (relacionamento)</em></p>
-                    </div>
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Caixinha de Perguntas</strong><br>
+                    "Quantos dias você gosta de ficar de férias? 🏖️"<br>
+                    Caixinha: "Conta pra gente!" 💬</p>
                 </div>
             </div>
 
             <!-- REEL 11 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">SEX 27/12</span>
-                    <span class="reel-type">Lifestyle</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">QUA 08/01 - REEL 11</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 11: "Verão Capixaba"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Lifestyle | Experiência Guriri
+                <h3 class="post-title">"Águas Mornas de Guriri"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Destacar diferencial de Guriri</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Guriri tem algo especial"</li>
+                            <li>"Águas mornas 🌡️"</li>
+                            <li>"Temperatura perfeita"</li>
+                            <li>"Criança entra feliz"</li>
+                            <li>"Adulto relaxa melhor"</li>
+                            <li>"Dia inteiro no mar"</li>
+                            <li>"Sem aquele frio!"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Seu verão perfeito 🌊"</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"Verão capixaba é diferente"</li>
-                        <li>"42km de praia"</li>
-                        <li>"Águas mornas"</li>
-                        <li>"Ciclovia estruturada"</li>
-                        <li>"Natureza preservada"</li>
-                        <li>"Gastronomia autêntica"</li>
-                        <li>"E o Cantinho do Céu?"</li>
-                        <li>"É seu lugar nessa história"</li>
-                        <li>"Janeiro esperando! 🌊"</li>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">As águas mornas de Guriri fazem TODA a diferença! 🌡️ Você entra no mar sem aquele choque de frio, as crianças brincam o dia inteiro sem reclamar, todo mundo aproveita muito mais... São 42km de praia com temperatura perfeita! E quando você fica no Cantinho do Céu, ainda tem a piscina privativa esperando. Janeiro e fevereiro disponíveis - consulte! 🌊☀️</p>
+                    <div class="hashtags">#ÁguasMornas #GuririES #PraiaPerfeita #Verão2026</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Slider</strong><br>
+                    "De 0 a 10, quanto você valoriza água morna na praia? 🌊"<br>
+                    Slider: 😐 0 → 10 🤩</p>
+                </div>
+            </div>
+
+            <!-- POST 6 - SUBSTITUÍDO -->
+            <div class="post-card post">
+                <div class="post-header">
+                    <div class="post-date">SEX 10/01 - POST 6</div>
+                    <div class="post-type post">POST</div>
+                </div>
+                <h3 class="post-title">"Espaços do Cantinho: Relaxe do Seu Jeito"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Mostrar espaços especiais da casa</div>
+
+                <div class="arte-box">
+                    <div class="section-title">🎨 Arte: Carrossel 4 cards</div>
+                    <ul>
+                        <li>Card 1: Varanda com mesa grande (perfeita pra reunir todos)</li>
+                        <li>Card 2: Rede na área externa (momento relaxamento)</li>
+                        <li>Card 3: Jardim bem cuidado com flores</li>
+                        <li>Card 4: Churrasqueira com bancada grande</li>
                     </ul>
                 </div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>O verão no litoral capixaba tem algo especial. Guriri oferece 42km de praias com águas mornas, ciclovia pra pedalar vendo o mar, Praia do Bosque com sombra natural, Projeto Tamar, aquela moqueca que só aqui tem... E quando você fica no Cantinho do Céu, aproveita tudo isso com conforto: piscina privativa, área gourmet completa, espaço pra família ou amigos. Janeiro tá chegando - garante seu verão! Link na bio 🌅🏖️</p>
-                    <p class="hashtags">#VeraoCapixaba #GuririES #LitoralES #Janeiro2026</p>
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">O Cantinho do Céu tem aqueles espaços que fazem TODA a diferença nas suas férias! 🏠 Varanda com mesa grande pra família toda se reunir, rede na área externa pra aquele momento de relaxamento total, jardim super bem cuidado com flores (perfeito pra fotos!), e churrasqueira com bancada grande pra fazer aquele churrasco caprichado. Cada cantinho pensado pro seu conforto! Janeiro e fevereiro têm vagas - consulte! 🌺✨</p>
+                    <div class="hashtags">#EspaçosEspeciais #CantinhoDoCéu #ConfortoTotal #CasaCompleta</div>
                 </div>
 
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Slider</span>
-                        <p><strong>Imagem:</strong> Pôr do sol em Guriri</p>
-                        <p><strong>Texto:</strong> "De 0 a 10, que nota você dá pro litoral capixaba? 🌅"</p>
-                        <p><strong>Slider:</strong> ⭐ 0 → 10</p>
-                    </div>
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Quiz</strong><br>
+                    "Qual seu cantinho favorito? 🏡"<br>
+                    Opções: □ Varanda / □ Rede / □ Jardim<br>
+                    <em>Todas: "Cantinho tem tudo! 💚"</em></p>
                 </div>
             </div>
 
             <!-- REEL 12 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">SEG 30/12</span>
-                    <span class="reel-type">Relacionamento</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">DOM 12/01 - REEL 12</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 12: "Último Post de 2025"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Relacionamento + Reforço Janeiro
-                </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"Último post de 2025"</li>
-                        <li>"Que ano foi esse!"</li>
-                        <li>"2026 promete mais"</li>
-                        <li>"Janeiro cheio de atrações"</li>
-                        <li>"Guriri esperando"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Seu verão começa AGORA"</li>
-                        <li>"Feliz 2026! 🥂"</li>
-                    </ul>
-                </div>
+                <h3 class="post-title">"Por Que Guriri?"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Consolidar Guriri como destino</div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>Último post de 2025! 🎆 Que ano incrível... e 2026 promete ser ainda melhor. Janeiro em Guriri tá chegando com tudo: 42km de praias, ciclovia, Praia do Bosque, gastronomia local, Projeto Tamar, shows incríveis... E o Cantinho do Céu ainda tem disponibilidade pra você curtir tudo isso com conforto - piscina privativa, área gourmet completa e estrutura top. Bora entrar no ano novo com os planos certos? Link na bio. FELIZ 2026! 🥂💚🌊</p>
-                    <p class="hashtags">#FelizAnoNovo #2026 #Janeiro2026 #GuririES #VeraoGuriri</p>
-                </div>
-
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Slider de Emoji</span>
-                        <p><strong>Imagem:</strong> "2026" em destaque</p>
-                        <p><strong>Texto:</strong> "De 0 a 100, qual sua expectativa pra 2026? 🚀"</p>
-                        <p><strong>Slider:</strong> 😐 → 🤩</p>
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Por que Guriri?"</li>
+                            <li>"42km de praias 🏖️"</li>
+                            <li>"Águas mornas perfeitas 🌡️"</li>
+                            <li>"Ciclovia estruturada 🚴"</li>
+                            <li>"Praia arborizada 🌳"</li>
+                            <li>"Rio + mar 🚣"</li>
+                            <li>"Vegetação preservada 🌿"</li>
+                            <li>"E o Cantinho do Céu"</li>
+                            <li>"Completa sua experiência! 🏠"</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- JANEIRO - SHOWS + TURISMO -->
-        <div class="week-section">
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Guriri reúne tudo que você procura nas férias perfeitas! 🌊 Praias de águas mornas, ciclovia pra toda família, Praia do Bosque com sombra natural, Barra Nova com rio e mar, vegetação de restinga preservada... E o Cantinho do Céu oferece a estrutura que você precisa: piscina privativa, área gourmet completa, conforto total. Janeiro e fevereiro ainda têm vagas! Link na bio ✨</p>
+                    <div class="hashtags">#PorQueGuriri #GuririCompleto #DestinoPerfeito #Verão2026</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Enquete</strong><br>
+                    "Você já se decidiu pelas férias? 🏖️"<br>
+                    Opções: ✅ Sim! / ⏳ Ainda não</p>
+                </div>
+            </div>
+
+            <!-- SEMANA 7 -->
             <div class="week-header">
-                <h2>🎤 Janeiro (01 a 10) - Shows + Turismo</h2>
-                <p>Foco: Verão Completo em Guriri</p>
+                🌊 Janeiro - Semana 7 (13 a 19/01)<br>
+                3 Reels + 0 Posts
             </div>
 
             <!-- REEL 13 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">QUA 01/01</span>
-                    <span class="reel-type">Relacionamento</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">SEG 13/01 - REEL 13</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 13: "Feliz 2026!"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Relacionamento + Awareness Shows
-                </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"FELIZ 2026! 🎆"</li>
-                        <li>"Ano novo"</li>
-                        <li>"Verão novo"</li>
-                        <li>"Memórias novas"</li>
-                        <li>"Janeiro em Guriri"</li>
-                        <li>"Praia + shows + diversão"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Seu verão começa agora!"</li>
-                        <li>"🌊"</li>
-                    </ul>
-                </div>
+                <h3 class="post-title">"Experiência Completa no Cantinho"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Reforçar proposta de valor</div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>FELIZ 2026! 🎆✨ Ano novo, verão novo, memórias novas pra criar. E pra quem quer começar o ano curtindo Guriri com tudo que ela oferece... O Cantinho do Céu tá de portas abertas! Janeiro chegou com praia, ciclovia, Praia do Bosque, gastronomia capixaba, Projeto Tamar e shows incríveis. Piscina privativa, área gourmet completa, 3 quartos e estrutura top. Consulta disponibilidade na bio e faz desse janeiro o MELHOR até agora! 🌊🔥</p>
-                    <p class="hashtags">#FelizAnoNovo #Janeiro2026 #GuririES #VeraoGuriri</p>
-                </div>
-
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Story Estático com GIF</span>
-                        <p><strong>Imagem:</strong> Fogos + "2026" + piscina Cantinho</p>
-                        <p><strong>Texto:</strong> "🎆 FELIZ 2026! 🎆 Que seja um ano de muitas viagens e momentos inesquecíveis! 🌊"</p>
-                        <p><em>Sem interação (relacionamento)</em></p>
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"No Cantinho do Céu:"</li>
+                            <li>"Você chega e relaxa"</li>
+                            <li>"Piscina quando quiser 🏊"</li>
+                            <li>"Churrasco quando quiser 🍖"</li>
+                            <li>"Privacidade total 🏠"</li>
+                            <li>"Praia a 5min 🏖️"</li>
+                            <li>"Conforto completo ❄️"</li>
+                            <li>"É SUA casa de férias"</li>
+                            <li>"Janeiro/fevereiro disponíveis! ✨"</li>
+                        </ul>
                     </div>
+                </div>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">A proposta do Cantinho do Céu é simples: você curte suas férias do SEU jeito! 🏠 Quer acordar cedo e ir pra praia? Quer relaxar na piscina a tarde toda? Quer fazer churrasco de madrugada? Pode! É sua casa de temporada - você decide o roteiro. Estrutura completa, conforto total, privacidade garantida. Janeiro e fevereiro têm vagas - consulte! 🌊✨</p>
+                    <div class="hashtags">#CantinhoDoCéu #SuaCasa #LiberidadeTotal #FériasDoSeuJeito</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Slider de Emoji</strong><br>
+                    "Quanto você valoriza liberdade nas férias? 🏠"<br>
+                    Slider: 😐 → 🤩</p>
                 </div>
             </div>
 
             <!-- REEL 14 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">SEX 03/01</span>
-                    <span class="reel-type">Urgência</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">QUA 15/01 - REEL 14</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 14: "Léo Santana AMANHÃ"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Conversão Urgente | Show iminente
-                </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"🦁 LÉO SANTANA 🦁"</li>
-                        <li>"AMANHÃ"</li>
-                        <li>"04 de janeiro"</li>
-                        <li>"Você tem ingresso?"</li>
-                        <li>"E tem onde ficar?"</li>
-                        <li>"Piscina + conforto"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Estrutura completa!"</li>
-                        <li>"⚡"</li>
-                    </ul>
-                </div>
+                <h3 class="post-title">"Janeiro Ainda Pela Metade"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Reforçar disponibilidade + fevereiro</div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>🦁 LÉO SANTANA AMANHÃ EM GURIRI! 🔥 E você JÁ TEM onde ficar? O Cantinho do Céu oferece estrutura completa: você curte o show, volta pra piscina privativa, área gourmet pra continuar a resenha e acorda no sábado descansado. 3 quartos confortáveis, tudo que você precisa. E depois do Léo ainda tem muito mais em janeiro: praia todo dia, ciclovia, Projeto Tamar, gastronomia... e outros shows! Manda DM ou acessa o link na bio ⚡🌊</p>
-                    <p class="hashtags">#LeoSantana #Show04Jan #GuririES #Janeiro2026</p>
-                </div>
-
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Countdown Urgente</span>
-                        <p><strong>Imagem:</strong> Léo Santana + "AMANHÃ"</p>
-                        <p><strong>Texto:</strong> "🦁 LÉO SANTANA AMANHÃ! Você tem onde ficar? 🔥"</p>
-                        <p><strong>Countdown:</strong> Para 04/01/2026 22:00</p>
-                        <p><strong>CTA:</strong> "DM AGORA! ⚡"</p>
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Janeiro na metade"</li>
+                            <li>"E ainda tem MUITO verão"</li>
+                            <li>"Fevereiro inteiro 🌞"</li>
+                            <li>"Março também"</li>
+                            <li>"Praia + sol + diversão"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Ainda tem vagas"</li>
+                            <li>"Aproveite! ⚡"</li>
+                        </ul>
                     </div>
+                </div>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Janeiro tá na metade mas o verão tá só começando! ☀️ Fevereiro inteiro pela frente, março também... São MESES de praia, sol e diversão em Guriri. O Cantinho do Céu ainda tem disponibilidade - não deixe o verão passar sem curtir! Consulte datas livres e garanta sua temporada. Link na bio! 🌊🔥</p>
+                    <div class="hashtags">#VerãoContinua #Fevereiro2026 #AindaDáTempo #GuririES</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Countdown</strong><br>
+                    "Quanto tempo de verão ainda temos? ☀️"<br>
+                    Countdown genérico<br>
+                    CTA: "Aproveite cada dia!"</p>
                 </div>
             </div>
 
             <!-- REEL 15 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">SEG 05/01</span>
-                    <span class="reel-type">Lifestyle</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">SEX 17/01 - REEL 15</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 15: "Janeiro Tá Só Começando"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Conversão | Manter momentum
+                <h3 class="post-title">"Piscina ou Praia? Por Que Não os Dois?"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Destacar melhor dos dois mundos</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Manhã: praia 🏖️"</li>
+                            <li>"Almoço na área gourmet 🍖"</li>
+                            <li>"Tarde: piscina privativa 🏊"</li>
+                            <li>"Pôr do sol: ciclovia 🚴"</li>
+                            <li>"Noite: relaxa na rede 🌙"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Você tem tudo! ✨"</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"Janeiro tá só começando"</li>
-                        <li>"Praia todo dia"</li>
-                        <li>"Ciclovia de manhã"</li>
-                        <li>"Praia do Bosque à tarde"</li>
-                        <li>"Moqueca no almoço"</li>
-                        <li>"Projeto Tamar"</li>
-                        <li>"E shows toda semana"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Aproveita TUDO! 🌊"</li>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Por que escolher entre praia e piscina se você pode ter os dois? 🌊🏊 No Cantinho do Céu você monta seu dia perfeito: praia de manhã, volta pra almoçar na área gourmet, tarde na piscina privativa, pedala pra ver o pôr do sol e relaxa na rede à noite. Janeiro/fevereiro ainda têm vagas! Link na bio ✨</p>
+                    <div class="hashtags">#MelhorDosDoisMundos #CantinhoDoCéu #FériasPerfeitas #GuririES</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Caixinha de Perguntas</strong><br>
+                    "Qual sua melhor memória de férias? 🏖️"<br>
+                    Caixinha: "Compartilha!" 💬</p>
+                </div>
+            </div>
+
+            <!-- SEMANA 8 -->
+            <div class="week-header">
+                🌊 Janeiro - Semana 8 (20 a 26/01)<br>
+                2 Reels + 2 Posts
+            </div>
+
+            <!-- POST 7 -->
+            <div class="post-card post">
+                <div class="post-header">
+                    <div class="post-date">SEG 20/01 - POST 7</div>
+                    <div class="post-type post">POST</div>
+                </div>
+                <h3 class="post-title">"Balsa: Travessia Especial"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Mencionar experiência da balsa</div>
+
+                <div class="arte-box">
+                    <div class="section-title">🎨 Arte: Carrossel 3 cards</div>
+                    <ul>
+                        <li>Card 1: Balsa atravessando rio</li>
+                        <li>Card 2: Vista da travessia</li>
+                        <li>Card 3: Experiência única</li>
                     </ul>
                 </div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>Janeiro em Guriri mal começou e já tá incrível! 🌊 Quem curtiu o Léo Santana esse fim de semana sabe. E o melhor? Tem MUITO mais pela frente: mais shows, mais praia, ciclovia estruturada, Praia do Bosque, gastronomia local maravilhosa, Projeto Tamar... O Cantinho do Céu ainda tem disponibilidade: piscina privativa pro descanso, área gourmet pra resenha, estrutura completa. Quem garantir agora aproveita o mês INTEIRO com conforto. Link na bio! 🌊✨</p>
-                    <p class="hashtags">#JaneiroGuriri #VeraoCompleto #GuririES #Janeiro2026</p>
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Uma experiência única em Guriri: a travessia de balsa pelo Rio Cricaré! 🚢 São 10 minutos de travessia conectando regiões, levando você por águas calmas enquanto aprecia a paisagem. É aquele passeio diferente que adiciona charme especial às férias. Inclua no seu roteiro quando ficar no Cantinho do Céu! Janeiro/fevereiro disponíveis 🌊✨</p>
+                    <div class="hashtags">#TravessiaDeBalsinha #GuririES #ExperiênciaÚnica #PasseiosDiferentes</div>
                 </div>
 
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Enquete</span>
-                        <p><strong>Imagem:</strong> Mix praia + diversão</p>
-                        <p><strong>Texto:</strong> "O que você mais tá curtindo em janeiro? 🌊"</p>
-                        <p><strong>Opções:</strong> 🏖️ Praia / 🎤 Shows</p>
-                    </div>
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Quiz</strong><br>
+                    "Você gosta de passeios de barco/balsa? 🚢"<br>
+                    Opções: □ Amo! / □ Nunca fiz / □ Quero experimentar!</p>
                 </div>
             </div>
 
             <!-- REEL 16 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">QUA 08/01</span>
-                    <span class="reel-type">Awareness</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">QUA 22/01 - REEL 16</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 16: "Projeto Tamar em Guriri"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Awareness | Atração turística diferenciada
+                <h3 class="post-title">"Fevereiro Chegando"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Transição janeiro → fevereiro</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Janeiro indo"</li>
+                            <li>"Fevereiro chegando"</li>
+                            <li>"Verão continua! ☀️"</li>
+                            <li>"Praia ainda mais gostosa"</li>
+                            <li>"Menos agitação"</li>
+                            <li>"Mais tranquilidade"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Tem vagas em fevereiro"</li>
+                            <li>"Aproveite! 🌊"</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"Guriri tem Projeto Tamar 🐢"</li>
-                        <li>"Preservação de tartarugas"</li>
-                        <li>"Desde 1988"</li>
-                        <li>"Soltura de filhotes"</li>
-                        <li>"Educação ambiental"</li>
-                        <li>"Experiência única"</li>
-                        <li>"E o Cantinho do Céu?"</li>
-                        <li>"Fica pertinho"</li>
-                        <li>"Vem conhecer! 🌊"</li>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Janeiro tá acabando mas o verão continua forte em fevereiro! ☀️ E olha a vantagem: fevereiro costuma ser mais tranquilo, praia menos cheia, você curte com mais sossego... mas o sol e as águas mornas continuam perfeitos! O Cantinho do Céu tem disponibilidade em fevereiro - consulte e garanta suas férias! 🌴✨</p>
+                    <div class="hashtags">#Fevereiro2026 #VerãoContinua #GuririES #FériasTransquilas</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Enquete</strong><br>
+                    "Você prefere férias em alta ou baixa temporada? 🏖️"<br>
+                    Opções: 🔥 Alta temporada / 😌 Mais tranquilo</p>
+                </div>
+            </div>
+
+            <!-- POST 8 -->
+            <div class="post-card post">
+                <div class="post-header">
+                    <div class="post-date">SEX 24/01 - POST 8</div>
+                    <div class="post-type post">POST</div>
+                </div>
+                <h3 class="post-title">"Nascer do Sol em Guriri"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Conteúdo inspiracional/emocional</div>
+
+                <div class="arte-box">
+                    <div class="section-title">🎨 Arte: Carrossel 3 cards</div>
+                    <ul>
+                        <li>Card 1: Nascer do sol na praia</li>
+                        <li>Card 2: Ciclovia ao amanhecer</li>
+                        <li>Card 3: Momento contemplativo</li>
                     </ul>
                 </div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>Guriri não é só praia e shows! O Projeto Tamar funciona aqui desde 1988, cuidando da preservação de tartarugas marinhas. Entre setembro e março rola temporada de desova, e você pode acompanhar o trabalho de perto, incluindo a emocionante soltura de filhotes no mar. É educação ambiental + experiência inesquecível! E quando você fica no Cantinho do Céu, dá pra incluir essa visita no roteiro com tranquilidade. Janeiro tem muito mais que praia - vem explorar! Link na bio 🐢💚</p>
-                    <p class="hashtags">#ProjetoTamar #GuririES #TurismoES #PreservacaoAmbiental</p>
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">O nascer do sol em Guriri é daqueles momentos que você guarda pra sempre! 🌅 Seja pedalando na ciclovia, caminhando na areia ou simplesmente contemplando da varanda do Cantinho... é o tipo de experiência que faz você lembrar por que as férias são tão importantes. E depois? Volta pra piscina ou faz um café da manhã especial na área gourmet! Fevereiro tem vagas - consulte! ☀️✨</p>
+                    <div class="hashtags">#NascerDoSol #GuririES #MomentoEspecial #ConexãoComNatureza</div>
                 </div>
 
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Quiz</span>
-                        <p><strong>Imagem:</strong> Tartaruga marinha</p>
-                        <p><strong>Texto:</strong> "Você sabia que Guriri tem Projeto Tamar? 🐢"</p>
-                        <p><strong>Opções:</strong> □ Sim! / □ Não sabia / □ Quero visitar!</p>
-                        <p><em>Todas corretas: "Vem conhecer! 💚"</em></p>
-                    </div>
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Story Contemplativo</strong><br>
+                    Imagem: Nascer do sol<br>
+                    "Qual o melhor horário do dia pra você? 🌅"</p>
                 </div>
             </div>
 
             <!-- REEL 17 -->
-            <div class="reel-card">
-                <div class="reel-header">
-                    <span class="reel-date">SEX 10/01</span>
-                    <span class="reel-type">Conversão</span>
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">DOM 26/01 - REEL 17</div>
+                    <div class="post-type reel">REEL</div>
                 </div>
-                <h3 class="reel-title">REEL 17: "Praia do Bosque"</h3>
-                <div class="reel-objective">
-                    🎯 <strong>Objetivo:</strong> Conversão | Diferencial de Guriri
+                <h3 class="post-title">"Últimos Dias de Janeiro"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Urgência suave + fevereiro/março</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Últimos dias de janeiro"</li>
+                            <li>"Férias acabando?"</li>
+                            <li>"Calma!"</li>
+                            <li>"Fevereiro inteiro 🌞"</li>
+                            <li>"Março também ☀️"</li>
+                            <li>"Verão até março"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Ainda tem tempo! ⚡"</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="texting-section">
-                    <h4>📱 Texting na Tela:</h4>
-                    <ul class="texting-list">
-                        <li>"Praia do Bosque"</li>
-                        <li>"Toda arborizada 🌳"</li>
-                        <li>"Sombra natural"</li>
-                        <li>"Águas claras e rasas"</li>
-                        <li>"Perfeita pra família"</li>
-                        <li>"Areia limpa"</li>
-                        <li>"Vegetação nativa"</li>
-                        <li>"Cantinho do Céu"</li>
-                        <li>"Conhece todas as praias! 🏖️"</li>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Janeiro tá acabando e suas férias também? Respira fundo: ainda tem MUITO verão! ☀️ Fevereiro inteiro pela frente, março também... O verão em Guriri vai até março, então você ainda tem tempo de curtir praia, piscina, ciclovia, tudo que o Cantinho do Céu oferece. Consulte disponibilidade em fevereiro e março! Não deixe o verão passar! 🌊🔥</p>
+                    <div class="hashtags">#AindaDáTempo #Fevereiro2026 #Março2026 #VerãoAtéMarço</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Countdown</strong><br>
+                    "Quantos dias faltam pro fim de janeiro? 📅"<br>
+                    Countdown para 31/01/2026</p>
+                </div>
+            </div>
+
+            <!-- SEMANA 9 -->
+            <div class="week-header">
+                🌊 Janeiro - Semana 9 (27 a 31/01)<br>
+                2 Reels + 1 Post
+            </div>
+
+            <!-- POST 9 -->
+            <div class="post-card post">
+                <div class="post-header">
+                    <div class="post-date">TER 27/01 - POST 9</div>
+                    <div class="post-type post">POST</div>
+                </div>
+                <h3 class="post-title">"Seu Próximo Destino Está Aqui"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Call to action + acessibilidade</div>
+
+                <div class="arte-box">
+                    <div class="section-title">🎨 Arte: Carrossel 3 cards</div>
+                    <ul>
+                        <li>Card 1: "Próximas férias: Guriri"</li>
+                        <li>Card 2: Mapa/localização acessível</li>
+                        <li>Card 3: "Cantinho do Céu te espera"</li>
                     </ul>
                 </div>
 
-                <div class="caption-section">
-                    <h4>📝 Legenda Completa:</h4>
-                    <p>A Praia do Bosque é aquele lugar especial de Guriri: toda arborizada, com sombra natural das árvores, águas claras e rasas ideais pro lazer com a família, areia limpa e vegetação nativa preservada. É o cenário perfeito pra quem quer fugir do sol escaldante sem deixar de curtir a praia! E quando você fica no Cantinho do Céu, tem tempo pra conhecer TODAS as praias com calma: a principal, a do Bosque, pedalar na ciclovia... Janeiro é perfeito pra explorar! Link na bio 🌳🏖️</p>
-                    <p class="hashtags">#PraiaDoBosque #GuririES #PraiasCapixabas #Janeiro2026</p>
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Já pensou no destino das próximas férias? Guriri é aquele lugar acessível, bonito e completo! 🌊 Praias de águas mornas, estrutura boa, atrações pra toda família... e o melhor: não precisa ir pro fim do mundo pra curtir um litoral incrível. O Cantinho do Céu tem estrutura completa esperando você. Fevereiro e março disponíveis - consulte! 🏠✨</p>
+                    <div class="hashtags">#ProximasFerias #GuririES #DestinoAcessível #PlanejeSuasFerias</div>
                 </div>
 
-                <div class="story-section">
-                    <h4>📲 Story Interativo:</h4>
-                    <div class="story-content">
-                        <span class="story-type">Caixinha de Perguntas</span>
-                        <p><strong>Imagem:</strong> Praia do Bosque arborizada</p>
-                        <p><strong>Texto:</strong> "Qual praia você mais quer conhecer em Guriri? 🏖️"</p>
-                        <p><strong>Caixinha:</strong> "Me conta!" 💬</p>
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Caixinha de Perguntas</strong><br>
+                    "Já planejou suas próximas férias? 📅"<br>
+                    Caixinha: "Conta!" 💬</p>
+                </div>
+            </div>
+
+            <!-- REEL 18 -->
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">QUI 29/01 - REEL 18</div>
+                    <div class="post-type reel">REEL</div>
+                </div>
+                <h3 class="post-title">"Por Que Casa de Temporada?"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Reforçar conceito casa de temporada</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Por que casa de temporada?"</li>
+                            <li>"Porque é SUA 🏠"</li>
+                            <li>"Seu espaço"</li>
+                            <li>"Seu tempo"</li>
+                            <li>"Sua privacidade"</li>
+                            <li>"Seu conforto"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Férias do seu jeito"</li>
+                            <li>"Fev/mar disponíveis! ✨"</li>
+                        </ul>
                     </div>
                 </div>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Casa de temporada é diferente porque você tem LIBERDADE! 🏠 Acorda na hora que quiser, faz café da manhã quando quiser, usa a piscina sem esperar, faz churrasco de madrugada se quiser... É SUA casa nas férias. O Cantinho do Céu oferece exatamente isso: privacidade, conforto e liberdade total. Fevereiro e março têm vagas! Link na bio 🌊✨</p>
+                    <div class="hashtags">#CasaDeTemporada #Liberdade #CantinhoDoCéu #FériasDoSeuJeito</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Slider</strong><br>
+                    "De 0 a 10, quanto você valoriza privacidade? 🏠"<br>
+                    Slider: 😐 0 → 10 🤩</p>
+                </div>
             </div>
+
+            <!-- REEL 19 -->
+            <div class="post-card reel">
+                <div class="post-header">
+                    <div class="post-date">SÁB 31/01 - REEL 19</div>
+                    <div class="post-type reel">REEL</div>
+                </div>
+                <h3 class="post-title">"Último Dia de Janeiro"</h3>
+                <div class="post-objetivo">🎯 Objetivo: Fechamento janeiro + fevereiro forte</div>
+
+                <div class="post-section">
+                    <div class="section-title">Texting na Tela:</div>
+                    <div class="texting-list">
+                        <ul>
+                            <li>"Último dia de janeiro"</li>
+                            <li>"Que mês incrível!"</li>
+                            <li>"E fevereiro?"</li>
+                            <li>"Promete ainda mais! 🌞"</li>
+                            <li>"Praia + sol + diversão"</li>
+                            <li>"Verão continua"</li>
+                            <li>"Cantinho do Céu"</li>
+                            <li>"Fevereiro disponível"</li>
+                            <li>"Bora? 🌊"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="legenda-box">
+                    <div class="section-title">📝 Legenda Completa:</div>
+                    <p class="legenda-text">Último dia de janeiro e que mês foi, hein! 🎆 Mas o verão não acabou - fevereiro chegando com tudo! ☀️ Praia, sol, águas mornas, ciclovia, Praia do Bosque, Barra Nova... tudo continua perfeito. O Cantinho do Céu tem disponibilidade em fevereiro e março - não deixe o verão passar! Consulte datas livres. Link na bio! 🌊🔥</p>
+                    <div class="hashtags">#UltimoDiaDeJaneiro #Fevereiro2026 #VerãoContinua #GuririES</div>
+                </div>
+
+                <div class="story-box">
+                    <strong>📲 Story Interativo:</strong>
+                    <p><strong>Story Reflexivo</strong><br>
+                    "Janeiro foi incrível! Fevereiro promete mais! 🌞 Cantinho do Céu disponível 🏠"</p>
+                </div>
+            </div>
+
         </div>
 
-        <!-- RESUMO FINAL -->
-        <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 40px; border-radius: 15px; margin-top: 40px; text-align: center;">
-            <h2 style="font-size: 2.5em; margin-bottom: 20px;">📊 Resumo Estratégico</h2>
+        <!-- SUMMARY -->
+        <div class="summary">
+            <h2>📊 Resumo Estratégico Final</h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0;">
-                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                    <h3 style="font-size: 2.5em; margin-bottom: 10px;">17</h3>
-                    <p>Reels Totais</p>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <span class="summary-number">19</span>
+                    <span class="summary-label">Reels Totais</span>
                 </div>
-                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                    <h3 style="font-size: 2.5em; margin-bottom: 10px;">7</h3>
-                    <p>Foco Confraternizações</p>
+                <div class="summary-card">
+                    <span class="summary-number">9</span>
+                    <span class="summary-label">Posts Totais</span>
                 </div>
-                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                    <h3 style="font-size: 2.5em; margin-bottom: 10px;">10</h3>
-                    <p>Foco Janeiro/Shows</p>
+                <div class="summary-card">
+                    <span class="summary-number">2</span>
+                    <span class="summary-label">Posts Especiais</span>
                 </div>
-                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                    <h3 style="font-size: 2.5em; margin-bottom: 10px;">17</h3>
-                    <p>Stories (1 por dia)</p>
+                <div class="summary-card">
+                    <span class="summary-number">19</span>
+                    <span class="summary-label">Stories Interativos</span>
                 </div>
             </div>
 
-            <div style="margin-top: 40px; padding: 30px; background: rgba(255,255,255,0.2); border-radius: 10px;">
-                <h3 style="margin-bottom: 15px;">🎯 Estratégia:</h3>
-                <ul style="text-align: left; max-width: 700px; margin: 0 auto; line-height: 2;">
-                    <li>✅ Dezembro: Confraternizações corporativas + amigos</li>
-                    <li>✅ Transição natural para temporada janeiro</li>
-                    <li>✅ Foco em Guriri COMPLETO (não só shows)</li>
-                    <li>✅ Informações corretas sobre Guriri</li>
-                    <li>✅ 1 story interativo por dia de postagem</li>
-                    <li>✅ Tom alegre, festivo e informativo</li>
+            <div class="highlights">
+                <h3>✨ Destaques Estratégicos</h3>
+                <ul>
+                    <li>POST ESPECIAL 25/12: Mensagem pessoal da Leidy pro Natal</li>
+                    <li>REEL ESPECIAL 31/12: Mensagem pessoal da Leidy pro Ano Novo</li>
+                    <li>Shows como isca sem oferecer vagas até 17/01</li>
+                    <li>Foco em vagas de meio de semana (natural, sem forçar)</li>
+                    <li>Tom acolhedor e inclusivo para todos os públicos</li>
+                    <li>Apresentação completa do Cantinho: piscina privativa, varanda, rede, jardim</li>
+                    <li>Destaque para atrações locais: Praia do Bosque, Barra Nova, ciclovia</li>
+                    <li>Vegetação de restinga mencionada naturalmente</li>
+                    <li>Churrasqueira com bancada (não mesa)</li>
+                    <li>Verão até março, férias terminam fim de janeiro</li>
+                    <li>Sem comparações com pousadas</li>
+                    <li>Sem uso do termo "base"</li>
                 </ul>
             </div>
         </div>
 
         <footer>
-            <p style="font-size: 1.2em; margin-bottom: 10px;">📍 Cantinho do Céu - Guriri, ES</p>
-            <p>Calendário Editorial | 04/12/2025 a 10/01/2026</p>
-            <p style="margin-top: 20px; opacity: 0.8;">Giz Marketing Digital</p>
+            📍 Cantinho do Céu - Guriri, ES<br>
+            Calendário Editorial | 12/12/2025 a 31/01/2026<br>
+            Giz Marketing Digital
         </footer>
     </div>
 </body>
